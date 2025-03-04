@@ -2,16 +2,43 @@
 @font-face  {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+@font-face  {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face  {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face  {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 
 body {
     font-family: 'Pretendard-Regular';
 }
 
 /* 노말라이즈 */
-body, ul, li {
+body, ul, li, h1, h2 {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -26,6 +53,7 @@ a {
 /* 변수 */
 :root {
     --main: #B2986D;
+    --brand-color: #F27028;
 }
 
 /* 라이브러리 */
@@ -35,9 +63,9 @@ a {
 
 /* 공통 */
 .con {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .icon {
@@ -53,6 +81,30 @@ a {
     font-weight: 600;
 }
 
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.brand-color {
+    color: var(--brand-color);
+}
+
+.f-s-28 {
+    font-size: 28px !important;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}    
 /* 커스텀 */
 
 /* 헤더탑 시작 */
@@ -162,3 +214,34 @@ a {
 }
 /* 메뉴박스 끝 */
 
+
+/* 섹션 main 시작 */
+.main {
+    margin-top: 48px;
+    margin-bottom: 60px;
+}
+
+.main .brand {
+    margin-top: 44px;
+    gap: 40px;
+}
+
+.main .txt-box {
+    align-self: center;
+}
+
+.main .txt-box > .txt {
+    margin-top: 40px;
+}
+
+.main .txt-box > .txt > div:first-child > p:first-child {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.main .txt-box > .txt > div:nth-child(2) {
+    margin: 32px 0;
+}
+
+
+/* 섹션 main 끝 */
