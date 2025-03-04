@@ -2,7 +2,7 @@
 $(function(){
     var headerTop = $('.header-top');
     var header = $('.header');
-    var headerTopHeight = headerTop.outerHeight();  // header-top의 높이값을 구함
+    var headerTopHeight = headerTop.outerHeight();  // header-top의 높이값
 
     // 스크롤 이벤트
     $(window).scroll(function() {
