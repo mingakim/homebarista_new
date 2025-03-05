@@ -42,7 +42,7 @@ body, ul, li, h1, h2 {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: #0D0D0D;
+    color: var(--txt);
 }
 
 a {
@@ -52,6 +52,7 @@ a {
 
 /* 변수 */
 :root {
+    --txt: #333333;
     --main: #B2986D;
     --brand-color: #F27028;
 }
@@ -109,7 +110,8 @@ img {
 
 /* 헤더탑 시작 */
 .header-top {
-    padding: 20px 0;
+    padding-top: 16px;
+    padding-bottom: 8px;
 }
 
 .header-top > .con {
@@ -139,8 +141,7 @@ img {
 }
 
 .header {
-    padding: 16px 0;
-    border-bottom: 1px solid #DDDDDD;    
+    padding: 16px 0;    
     background-color: #ffff;
 }
 
@@ -157,13 +158,19 @@ img {
     transform: translate(-50%, -50%);
 }
 
+
+.header .scroll-header {
+    display: none;    
+}
+
 .header .icons {
     align-items: center;
     gap: 24px;
+    height: 68px;
 }
 
 .header .icons .search-box.active {
-    border: 1px solid var(--main);
+    border: 1px solid var(--txt);
     border-radius: 50px;
     padding: 2px 12px;
 }
@@ -196,12 +203,27 @@ img {
     width: 100%;
     padding: 24px 0;
 }
+
+.header > .con.visible {
+    justify-content: space-between;
+}
+
+.header .scroll-header.visible {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo.hidden {
+    display: none;
+}
 /* 헤더 끝 */
 
 
 /* 메뉴박스 시작 */
 .menu-box {
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .menu-box ul {
