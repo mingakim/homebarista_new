@@ -6,103 +6,122 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="style.css">
+    
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- 제이쿼리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- 헤더 탑 -->
-    <div class="header-top">
-        <div class="con flex">
-            <a href="#">로그인</a>
-            <a href="#">CS센터</a>
-        </div>        
-    </div>
-
-    <!-- 헤더 -->
-    <div class="header">
-        <div class="con flex">
-            <a href="#" class="logo">
-                <img src="/homebaristaimage/HOME BARISTA CLUB.jpg" alt="로고이미지">
-            </a>
-
-            <ul class="scroll-header">
-                <li><a href="#" class="menu-box_txt">공동구매</a></li>
-                <li><a href="#" class="menu-box_txt">정수필터</a></li>
-                <li><a href="#" class="menu-box_txt">커피용품</a></li>
-                <li><a href="#" class="menu-box_txt">원두 도/소매 상담</a></li>
-                <li><a href="#" class="menu-box_txt">구매후기</a></li>
-            </ul>
-
-            <ul class="icons flex">
-                <li>
-                    <div class="search-box flex">
-                        <input type="text" placeholder="검색어 입력">
-                        <button class="icon" type="button">
-                            <img src="/homebaristaimage/검색.svg" alt="">
-                        </button>
-                    </div>
-                </li>
-                <li><a class="icon" href="#"><img src="/homebaristaimage/마이페이지.svg" alt="마이페이지"></a></li>
-                <li><a class="icon" href="#"><img src="/homebaristaimage/배송.svg" alt="배송현황"></a></li>
-                <li><a class="icon" href="#"><img src="/homebaristaimage/장바구니.svg" alt="장바구니"></a></li>
-            </ul>
+    <div class="headerWrap">
+        <!-- 헤더 탑 -->
+        <div class="header-top">
+            <div class="con flex">
+                <a href="#">로그인</a>
+                <a href="#">CS센터</a>
+            </div>        
         </div>
-    </div>
 
-    <!-- 메뉴박스 -->
-    <div class="menu-box">
-        <div class="con">
-            <ul>
-                <li><a href="#" class="menu-box_txt">공동구매</a></li>
-                <li><a href="#" class="menu-box_txt">정수필터</a></li>
-                <li><a href="#" class="menu-box_txt">커피용품</a></li>
-                <li><a href="#" class="menu-box_txt">원두 도/소매 상담</a></li>
-                <li><a href="#" class="menu-box_txt">구매후기</a></li>
-            </ul>
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="con flex">
+                <a href="#" class="logo">
+                    <img src="/homebaristaimage/HOME BARISTA CLUB.jpg" alt="로고이미지">
+                </a>
+
+                <ul class="icons flex">
+                    <li>
+                        <div class="search-box flex">
+                            <input type="text" placeholder="검색어 입력">
+                            <button class="icon" type="button">
+                                <img src="/homebaristaimage/검색.svg" alt="">
+                            </button>
+                        </div>
+                    </li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/마이페이지.svg" alt="마이페이지"></a></li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/배송.svg" alt="배송현황"></a></li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/장바구니.svg" alt="장바구니"></a></li>
+                </ul>
+            </div>
         </div>
+
+        <!-- 메뉴박스 -->
+        <div class="menu-box scroll-header">
+            <div class="con">
+                <div>
+                    <a href="#" class="logo-icon img-box">
+                        <img src="/homebaristaimage/home-icon-2.svg" alt="">
+                    </a>
+    
+                    <ul class="menu">
+                        <li><a href="#">공동구매</a></li>
+                        <li><a href="#">정수필터</a></li>
+                        <li><a href="#">커피용품</a></li>
+                        <li><a href="#">원두 도/소매 상담</a></li>
+                        <li><a href="#">구매후기</a></li>
+                    </ul>
+                </div>
+
+
+                <ul class="icons flex">
+                    <li>
+                        <div class="search-box flex">
+                            <input type="text" placeholder="검색어 입력">
+                            <button class="icon" type="button">
+                                <img src="/homebaristaimage/검색.svg" alt="">
+                            </button>
+                        </div>
+                    </li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/마이페이지.svg" alt="마이페이지"></a></li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/배송.svg" alt="배송현황"></a></li>
+                    <li><a class="icon" href="#"><img src="/homebaristaimage/장바구니.svg" alt="장바구니"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="min-hight"></div>
     </div>
 
     <section class="main">
         <div class="con">
-            <h1>2월 공구</h1>
+            <div class="title">
+                <span>2월 공구</span>
+                <h1>
+                    <span class="brand-color">필아웃커피</span>
+                    <span class="f-40-b">x</span>
+                    <span class="main-color">홈바리스타클럽</span>
+                </h1>
+            </div>
+
             <div class="brand flex">
                 <div class="img-box">
-                    <img src="/homebaristaimage/image 3.jpg" alt="필아웃커피포스터">
+                    <img src="/homebaristaimage/image 63.svg" alt="필아웃커피포스터">
                 </div>
                 <div class="txt-box">
-                    <h2>
-                        <span class="brand-color">필아웃커피</span>
-                        <span class="f-s-28">X</span>
-                        홈바리스타클럽
-                    </h2>
-                    <div class="txt">
-                        <div>
-                            <p>영상 맛집? 맞습니다.</p>
-                            <p>하지만 더 유명해질 것은 ‘로스팅’입니다.</p>
-                        </div>
+                    <div data-aos="fade-down">
+                        <p>영상 맛집? 맞습니다.</p>
+                        <p>하지만 더 유명해질 것은 '<span>로스팅</span>’입니다.</p>
+                    </div>
 
-                        <div>
-                            <p>
-                                ‘재미’와 ‘즐거움’을 추구하며 인스타그램에서 재미있는 영상으로 인지도를 쌓기 
-                                <br>
-                                시작했지만 우리의 진짜 실력은 ‘로스팅’과 ‘커피’ 그 본질에 있습니다.
-                            </p>
-                            <p>
-                                한 잔의 커피가 탄생하기 위해서는 먼저, 하나의 블렌딩이 탄생되어야 합니다.
-                                <br>
-                                그 하나만의 블렌딩을 만들기 위해
-                                <br>
-                                수백, 수천 번의 로스팅 시행착오를 거쳤습니다.    
-                            </p>
-                        </div>
+                    <div>
+                        <p>
+                            ‘재미’와 ‘즐거움’을 추구하며 인스타그램에서 재미있는 영상으로 인지도를 쌓기 
+                            <br>
+                            시작했지만 우리의 진짜 실력은 ‘로스팅’과 ‘커피’ 그 본질에 있습니다.
+                        </p>
+                        <p>
+                            하나의 블렌딩을 만들기 위해 수백, 수천 번의 로스팅 시행착오를 거쳤습니다.    
+                        </p>
+                    </div>
 
-                        <div>
-                            <p>이제는 말하고 싶습니다.</p>
-                            <p>필아웃은 영상보다 ‘커피’를 더 잘 합니다.</p>
-                        </div>
+                    <div>
+                        <p>이제 <span>필아웃</span>은 영상보다 ‘<span>커피</span>’를 더 잘 합니다.</p>
                     </div>
                 </div>
             </div>
