@@ -36,5 +36,26 @@ $('.icons .search-box > button').click(function(){
 });
 
 
+// .main .txt-box aos
+setTimeout(function(){
+    AOS.init();
+},500);
 
-AOS.init();
+
+// price 슬릭슬라이더
+
+// function SliderBox1__init() {
+//     $('.slider_box > .slick').slick({
+//         dots: false,
+//         autoplay: false,
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         centerMode:true,
+//         centerPadding: 0,
+//         arrows:true,
+//         prevArrow: ".slider_box > .arrows > .btn_arrow_left",
+//         nextArrow: ".slider_box > .arrows > .btn_arrow_right",
+//     });
+//     }
+
+//     SliderBox1__init();
