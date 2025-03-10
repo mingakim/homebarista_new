@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>     
    
     <!-- 제이쿼리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
@@ -14,13 +12,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
     <!-- 슬릭슬라이더 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -143,25 +144,287 @@
             </div>
 
             <ul class="price-tag">
-                <li data-target="1"><a>FILLOUT BLEND</a></li>
-                <li data-target="2"><a>홈바클 BLEND</a></li>
-                <li data-target="3"><a>SINGLE ORIGIN</a></li>
-                <li data-target="4"><a>JASON GEISHA</a></li>
-                <li data-target="5"><a>QIMA YEMEN</a></li>
-                <li data-target="6"><a>POWDER COFFEE</a></li>
+                <li data-target="box-1"><a>FILLOUT BLEND</a></li>
+                <li data-target="box-2"><a>홈바클 BLEND</a></li>
+                <li data-target="box-3"><a>SINGLE ORIGIN</a></li>
+                <li data-target="box-4"><a>JASON GEISHA</a></li>
+                <li data-target="box-5"><a>QIMA YEMEN</a></li>
+                <li data-target="box-6"><a>POWDER COFFEE</a></li>
             </ul>
 
             <div class="slider-box">
-                <div class="arrows">
-                    <div class="arrow-prev"><img src="" alt=""></div>
-                    <div class="arrow-next"><img src="" alt=""></div>
+                <div class="arrow-box">
+                    <div class="arrow arrow-prev"><img src="/homebaristaimage/arrow-prev.svg" alt=""></div>
+                    <div class="arrow arrow-next"><img src="/homebaristaimage/arrow-next.svg" alt=""></div>
                 </div>
 
 
-                <div class="slick" id="1">
+                <div class="slick" id="box-1">
                     <div class="item">
                         <div class="img-box">
                             <img src="/homebaristaimage/price-list.svg" alt="">
+                            <div class="after-box">
+                                <div class="note">
+                                    <span>CUP NOTE</span>
+                                    <span>견과류, 카라멜, 다크초콜릿</span>
+                                </div>
+                                <div class="roasting">
+                                    <span>ROASTING POINT</span>
+                                    <span>중강배전</span>
+                                </div>
+                                <div class="drink">
+                                    <span>추천음료</span>
+                                    <span>아메리카노</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-body">
+                            <div class="name">
+                                <span>필디카프 다크</span>
+                                <p>Brazil 20%, Guatemala 40%, Colombia 40%</p>
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span>200g x 1</span>
+                                    <span>12,800원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 3</span>
+                                    <span>28,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 5</span>
+                                    <span>41,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/price-list.svg" alt="">
+                            <div class="after-box">
+                                <div class="note">
+                                    <span>CUP NOTE</span>
+                                    <span>견과류, 카라멜, 다크초콜릿</span>
+                                </div>
+                                <div class="roasting">
+                                    <span>ROASTING POINT</span>
+                                    <span>중강배전</span>
+                                </div>
+                                <div class="drink">
+                                    <span>추천음료</span>
+                                    <span>아메리카노</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-body">
+                            <div class="name">
+                                <span>필디카프 다크</span>
+                                <p>Brazil 20%, Guatemala 40%, Colombia 40%</p>
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span>200g x 1</span>
+                                    <span>12,800원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 3</span>
+                                    <span>28,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 5</span>
+                                    <span>41,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/price-list.svg" alt="">
+                            <div class="after-box">
+                                <div class="note">
+                                    <span>CUP NOTE</span>
+                                    <span>견과류, 카라멜, 다크초콜릿</span>
+                                </div>
+                                <div class="roasting">
+                                    <span>ROASTING POINT</span>
+                                    <span>중강배전</span>
+                                </div>
+                                <div class="drink">
+                                    <span>추천음료</span>
+                                    <span>아메리카노</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-body">
+                            <div class="name">
+                                <span>필디카프 다크</span>
+                                <p>Brazil 20%, Guatemala 40%, Colombia 40%</p>
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span>200g x 1</span>
+                                    <span>12,800원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 3</span>
+                                    <span>28,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 5</span>
+                                    <span>41,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/price-list.svg" alt="">
+                            <div class="after-box">
+                                <div class="note">
+                                    <span>CUP NOTE</span>
+                                    <span>견과류, 카라멜, 다크초콜릿</span>
+                                </div>
+                                <div class="roasting">
+                                    <span>ROASTING POINT</span>
+                                    <span>중강배전</span>
+                                </div>
+                                <div class="drink">
+                                    <span>추천음료</span>
+                                    <span>아메리카노</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-body">
+                            <div class="name">
+                                <span>필디카프 다크</span>
+                                <p>Brazil 20%, Guatemala 40%, Colombia 40%</p>
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span>200g x 1</span>
+                                    <span>12,800원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 3</span>
+                                    <span>28,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 5</span>
+                                    <span>41,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/price-list.svg" alt="">
+                            <div class="after-box">
+                                <div class="note">
+                                    <span>CUP NOTE</span>
+                                    <span>견과류, 카라멜, 다크초콜릿</span>
+                                </div>
+                                <div class="roasting">
+                                    <span>ROASTING POINT</span>
+                                    <span>중강배전</span>
+                                </div>
+                                <div class="drink">
+                                    <span>추천음료</span>
+                                    <span>아메리카노</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item-body">
+                            <div class="name">
+                                <span>필디카프 다크</span>
+                                <p>Brazil 20%, Guatemala 40%, Colombia 40%</p>
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span>200g x 1</span>
+                                    <span>12,800원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 3</span>
+                                    <span>28,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>200g x 5</span>
+                                    <span>41,000원</span>
+                                    <div class="cart-box">
+                                        <img src="/homebaristaimage/담기버튼장바구니.svg" alt="">
+                                        <span>담기</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="slick" id="box-2">
+                    <div class="item">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/price-list-center.PNG" alt="">
                             <div class="after-box">
                                 <div class="note">
                                     <span>CUP NOTE</span>
@@ -424,5 +687,180 @@
         </div>
     </section>
 
+    <section class="review">
+        <div class="con">
+            <div class="s-title">
+                <h2>실시간 후기</h2>
+                <a href="#" class="view-more">더보기</a>
+            </div>
+
+            <div class="review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="/homebaristaimage/review.svg" alt="">
+                        </div>
+                        <div class="star-box">
+                            <span>네이버페이구매자</span>
+                            <span class="star">
+                                <img src="/homebaristaimage/star.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="txt-box">
+                            <p>
+                                믿고 먹는 필아웃 커피! 감사합니다. 
+                                <br>
+                                신선하고 맛있어요. 생각보다 더 좋아서 재구매 의사있습니다. 
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
