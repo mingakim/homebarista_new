@@ -76,6 +76,8 @@ a {
     --price-tag-4: #4AACB9;
     --price-tag-5: #4A746A;
     --price-tag-6: #9ABCE2;
+    --price-after-box: #8C8C8C;
+    --price-detail-red: #F93D2C;
 }
 
 /* 라이브러리 */
@@ -451,14 +453,77 @@ h2 {
     background-color: var(--price-tag-6);
 }
 
+.price .slick {
+    overflow: hidden;
+    /* width: 100%; */
+}
+
 .price .slick .item {
     background-color: #fff;
-    padding: 28px;
+    padding: 28px;    
+    margin-right: 101px;
 }
 
 .price .slick .item .img-box {
     width: 300px;
     height: 300px;
+    position: relative;
+}
+
+.price .slick .item.slick-center .img-box {
+    width: 420px;
+    height: 420px;
+    position: relative;
+}
+
+.price .slick .item .after-box {
+    position: absolute;
+    bottom: 12px; 
+    right: 12px;
+    padding: 12px 6px;
+    background-color: #fff;
+    border-radius: 4px;
+    opacity: 80%;
+    z-index: 30; 
+}
+
+.price .slick .item .after-box .roasting {
+    margin: 20px 0;
+}
+
+.price .slick .item.slick-center .after-box .roasting {
+    margin: 24px 0;
+}
+
+.price .slick .item .after-box > div > span {
+    display: block;
+}
+
+.price .slick .item .after-box > div > span:first-child {
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--price-after-box);
+    margin-bottom: 2px;
+}
+
+.price .slick .item.slick-center .after-box > div > span:first-child {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--price-after-box);
+    margin-bottom: 2px;
+}
+
+
+.price .slick .item .after-box > div > span:last-child {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.price .slick .item.slick-center .after-box > div > span:last-child {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--black);
 }
 
 .price .slick .item .item-body {
@@ -485,4 +550,34 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+
+.price .slick .item .item-body > .detail > div:nth-child(2){
+    margin: 4px 0;
+}
+
+.price .slick .item .item-body > .detail > div > span:first-child {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.price .slick .item .item-body > .detail > div > span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--price-detail-red);
+}
+
+.price .slick .item .item-body > .detail > div > .cart-box {
+    display: flex;
+    gap: 8px;
+    background-color: var(--price-tag-1);
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.price .slick .item .item-body > .detail > div > .cart-box > span {
+    color: #fff;
+    font-size: 14px;
+}
+
+
 /* 섹션 price 끝 */

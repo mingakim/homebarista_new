@@ -5,21 +5,21 @@ $(function(){
     var logo = $('.header .logo');
     var scrollHeader = $('.scroll-header');
     var minHeight = $('.headerWrap .min-hight');
-    var headerTopHeight = headerTop.outerHeight();  // header의 높이값
+    var headerTopHeight = headerTop.outerHeight();  // headertop의 높이값
 
     // 스크롤 이벤트
     $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();  // 현재 스크롤 위치
 
         if (scrollTop > headerTopHeight) {  // 스크롤이 header의 높이를 넘으면
-            headerTop.addClass('hidden');  // header-top 숨기기
-            header.addClass('hidden');  // header를 고정
+            headerTop.addClass('hidden');  
+            header.addClass('hidden');  
             logo.addClass('hidden');
             scrollHeader.addClass('fixed');
             minHeight.addClass('visible');
         } else {
-            headerTop.removeClass('hidden');  // header-top 보이기
-            header.removeClass('hidden');  // header 고정 해제
+            headerTop.removeClass('hidden');  
+            header.removeClass('hidden');  
             logo.removeClass('hidden');
             scrollHeader.removeClass('fixed');
             minHeight.removeClass('visible');
@@ -43,19 +43,18 @@ setTimeout(function(){
 
 
 // price 슬릭슬라이더
+function SliderBox__init() {
+    $('.slider-box > .slick').slick({
+        dots: false,
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '0',
+        arrows:true,
+        prevArrow: ".slider-box > .arrows > .arrow-prev",
+        nextArrow: ".slider-box > .arrows > .arrow-next ",
+    });
+    }
 
-// function SliderBox1__init() {
-//     $('.slider_box > .slick').slick({
-//         dots: false,
-//         autoplay: false,
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         centerMode:true,
-//         centerPadding: 0,
-//         arrows:true,
-//         prevArrow: ".slider_box > .arrows > .btn_arrow_left",
-//         nextArrow: ".slider_box > .arrows > .btn_arrow_right",
-//     });
-//     }
-
-//     SliderBox1__init();
+    SliderBox__init();
