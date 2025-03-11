@@ -158,7 +158,8 @@ h2 {
 
 
 img {
-    display: block;    
+    display: block;  
+    object-fit: cover;
 }
 
 /* 커스텀 */
@@ -184,14 +185,48 @@ img {
 /* 헤더탑 끝 */
 
 /* 헤더 시작 */
-@media screen and (max-width: 1260px) {
-    .header > .con {
-        justify-content: space-between !important;
-    }
-
+@media screen and  (max-width: 1260px) { 
     .header .logo {
         position: static !important;
         transform: translate(0) !important;
+    }
+}
+
+@media screen and (min-width: 859px) and  (max-width: 1260px) {
+    .header > .con {
+        justify-content: space-between !important;
+    }
+}
+
+@media screen and (max-width: 859px) {
+    .header .con {
+        display: block;
+    }
+    .header .logo {
+        width: 100%;
+    }
+
+    .header .logo > img {
+        width: 240px;
+    }    
+
+    .header .small-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .header .small-header .sub-menu {
+        display: block;
+    }
+
+    .icons .search-box > input[type="text"] {
+        max-width: 110px !important;
+    }
+    
+    .menu-box .menu {
+        display: none !important;
     }
 }
 
@@ -201,15 +236,20 @@ img {
 
 .header > .con {
     position: relative;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .header .logo {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.header .sub-menu {
+    display: none;
 }
 
 .icons {
@@ -226,7 +266,8 @@ img {
 
 .icons .search-box > input[type="text"] {
     display: none;
-    border: 0;
+    border: 0;  
+    width: 160px;  
 }
 
 .icons .search-box > input[type="text"]:focus {
@@ -257,6 +298,7 @@ img {
 
 .menu-box .logo-icon {
     width: 50px;
+    height: 50px;
 }
 
 .menu-box .menu {
@@ -654,7 +696,7 @@ img {
 }
 
 .review .swiper-slide .img-box {
-    width: 300px;
+    width: 100%;
 }
 
 .review .swiper-slide .star-box {
