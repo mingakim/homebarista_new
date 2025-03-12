@@ -34,6 +34,7 @@ $(".icons .search-box > button").click(function () {
   $(".icons .search-box > input[type=text]").addClass("active");
 });
 
+
 // .main .txt-box aos
 setTimeout(function () {
   AOS.init();
