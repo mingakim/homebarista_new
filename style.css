@@ -688,6 +688,7 @@ img {
     display: flex;
     gap: 15px;
     align-items: center;
+    padding-bottom: 12px;
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
