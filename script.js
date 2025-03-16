@@ -35,22 +35,46 @@ $(".icons .search-box > button").click(function () {
 });
 
 
-// .main .txt-box aos
-setTimeout(function () {
-  AOS.init();
-}, 500);
+// // .main .txt-box aos
+// setTimeout(function () {
+//   AOS.init();
+// }, 500);
+
+
+// visual-swiper
+var swiper = new Swiper(".visual-swiper", {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 80,
+  navigation: {
+    nextEl: ".visual .swiper-button-next",
+    prevEl: ".visual .swiper-button-prev"
+  },
+});
 
 
 // monthly-swiper
+// let $swiperPrev = document.querySelector('.monthly-swiper .swiper-button-prev');
 var swiper = new Swiper(".monthly-swiper", {
   slidesPerView: 3,
-  spaceBetween: 145,
+  // spaceBetween: 135,
   centeredSlides: true,
   loop: true,
+  // watchOverflow : true,
   navigation: {
-    nextEl: ".montlyBrand .swiper-button-next",
-    prevEl: ".montlyBrand .swiper-button-prev",
+    nextEl: ".monthly-swiper .swiper-button-next",
+    prevEl: ".monthly-swiper .swiper-button-prev",
   },
+  // on: {
+  //   activeIndexChange : function() {
+  //     if (this.realIndex == 0) {
+  //       $swiperPrev.classList.add('swiper-button-disabled');
+  //       startNum = false;
+  //     } else {
+  //       $swiperPrev.classList.remove('swiper-button-disabled');
+  //     }
+  //   }
+  // }
 });
 
 
