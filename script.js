@@ -41,11 +41,33 @@ setTimeout(function () {
 }, 500);
 
 
+// monthly-swiper
+var swiper = new Swiper(".monthly-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 145,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: ".montlyBrand .swiper-button-next",
+    prevEl: ".montlyBrand .swiper-button-prev",
+  },
+});
 
 
-
-// price 슬라이더
-
+// best-swiper슬라이더
+var mainSwiper = new Swiper(".best-swiper", {
+  slidesPerView: 1.5,
+  spaceBetween: 94,
+  navigation: {
+    nextEl: ".best .swiper-button-next",
+    prevEl: ".best .swiper-button-prev",
+  },
+  breakpoints: {  
+    765: {
+      slidesPerView: 3,
+    }
+  },  
+});
 
 
 // review 스와이퍼

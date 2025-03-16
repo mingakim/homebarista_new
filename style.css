@@ -69,19 +69,11 @@ a {
 :root {
     --black: #333333;
     --main: #b2986d;
-    --brand-color: #f27028;
     --view-more: #999999;
 }
 
 :root {
-    --price-tag-1: #f27028;
-    --price-tag-2: #9d9e4e;
-    --price-tag-3: #878bbb;
-    --price-tag-4: #4aacb9;
-    --price-tag-5: #4a746a;
-    --price-tag-6: #9abce2;
-    --price-after-box: #8c8c8c;
-    --price-detail-red: #f93d2c;
+    
 }
 
 /* 라이브러리 */
@@ -92,7 +84,6 @@ a {
 .con {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .icon {
@@ -139,6 +130,7 @@ a {
 .s-title {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 /* 공통 */
@@ -160,6 +152,10 @@ h2 {
 img {
     display: block;  
     object-fit: cover;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    display: none;
 }
 
 /* 커스텀 */
@@ -393,12 +389,231 @@ img {
 }
 
 
-/* 섹션 main 시작 */
+/* 섹션 main-info 시작 */
+.main-info {
+    padding-top: 110px;
+    padding-bottom: 160px;
+}
 
-/* 섹션 main 끝 */
+.main-info .con {
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
 
-/* 섹션 price 시작 */
+.main-info .txt p:first-child {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
 
+.main-info .txt p:nth-child(2) {
+    margin: 10px 0;
+    font-size: 52px;
+    font-weight: 800;
+    color: #D36E6B;
+}
+
+.main-info .txt p:nth-child(3) {
+    margin-top: 36px;
+    font-size: 18px;
+}
+
+.main-info .txt p:nth-child(4) {
+    margin-top: 28px;
+    margin-bottom: 46px;
+    font-size: 18px;
+}
+
+.main-info .txt p:last-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+/* 섹션 main-info 끝 */
+
+/* 섹션 이달의브랜드 시작 */
+.monthlyBrand {
+    padding: 170px 0;
+    background-color: #F9ECE8;    
+}
+
+.monthlyBrand .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.monthly-main {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 140px 0;
+}
+
+.monthly-main .monthly-swiper .swiper-slide {
+    position: relative;
+    max-width: 460px;
+    min-width: 280px;
+}
+
+.monthly-main .monthly-swiper .swiper-slide-active {
+    transform: scale(1.3);
+}
+
+.monthly-main .monthly-swiper .swiper-slide > a {
+    position: relative;    
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.monthly-main .monthly-swiper .swiper-slide > a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: all .3s;
+}
+
+.monthly-main .monthly-swiper .swiper-slide:hover > a::after {
+    content: "자세히 보기";
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.monthly-main .monthly-swiper .swiper-button {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;   
+}
+
+/* 섹션 이달의브랜드 끝 */
+
+/* 섹션 best 시작 */
+.best {
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+.best .s-title {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.best .s-title .swiper-button-wrap {
+    position: relative;
+    display: flex;
+    gap: 45px;
+}
+
+.best .s-title .swiper-button-wrap .swiper-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 34px;
+    height: 34px;
+}
+
+.best .s-title .swiper-button-wrap .swiper-button-prev {
+    background-image: url(/homebaristaimage/인기상품prev.svg);
+    left: 0;
+}
+
+.best .s-title .swiper-button-wrap .swiper-button-next {
+    background-image: url(/homebaristaimage/인기상품next.svg);
+    right: 0;
+}
+
+.best .best-swiper {
+    overflow: hidden;
+}
+
+.best .best-swiper .swiper-slide > a {
+    display: block;
+    width: 100%;s
+}
+
+.best .best-swiper .swiper-slide .img-box::before {
+    content: "";
+    padding-bottom: 122%;
+    display: block;
+}
+
+.best .best-swiper .swiper-slide .img-box {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.best .best-swiper .swiper-slide .img-box > img {
+    position: absolute;
+}
+
+.best .best-swiper .swiper-slide .img-box .review-box {    
+    position: absolute;
+    padding: 2px 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.best .best-swiper .swiper-slide .txt-box p:first-child {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.best .best-swiper .swiper-slide .txt-box p:last-child {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #B3B3B3;
+    position: relative;
+}
+
+.best .best-swiper .swiper-slide .txt-box p:last-child span:first-child::after {
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: #B3B3B3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);    
+}
+
+.best .best-swiper .swiper-slide .txt-box p:last-child span:last-child {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--main);
+}  
+/* 섹션 best끝 */
+
+
+/* 섹션 review 시작 */
+.review {
+    margin: 90px 0;
+}
 
 .s-title > .view-more {
     display: inline-flex;
@@ -416,15 +631,6 @@ img {
     background-repeat: no-repeat;
     background-size: 100%;
     object-fit: cover;
-}
-
-
-
-/* 섹션 price 끝 */
-
-/* 섹션 review 시작 */
-.review {
-    margin: 90px 0;
 }
 
 .review .review-swiper {
