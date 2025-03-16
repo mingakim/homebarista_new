@@ -41,28 +41,11 @@ setTimeout(function () {
 }, 500);
 
 
-$(".price .price-tag > li").click(function () {
-  var target = $(this).data("target");
-  $(".price .slick").hide(); // 모든 이미지 숨기기
-  $("#" + target).fadeIn(); // 선택한 이미지 표시
-});
+
 
 
 // price 슬라이더
-function SliderBox__init() {
-  $(".slider-box > .slick").slick({
-    dots: false,
-    autoplay: false,
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: "0",
-    arrows: true,
-    prevArrow: ".slider-box .arrow-prev",
-    nextArrow: ".slider-box .arrow-next",
-  });
-}
 
-SliderBox__init();
 
 
 // review 스와이퍼
