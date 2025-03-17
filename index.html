@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -105,7 +109,7 @@
 
 
     <!-- visual -->
-     <section class="visual">
+    <section class="visual">
         <div class="visual-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -129,17 +133,17 @@
             <div class="swiper-button swiper-button-next"></div>
                     
         </div>
-     </section>
+    </section>
 
-     <!-- video -->
-      <section class="video">
+    <!-- video -->
+    <section class="video">
         <div class="con">
-            <span>[BUNKER] 2025 Brand Film.</span>
+            <p>[BUNKER] 2025 Brand Film.</p>
 
             <div class="video-box">
-                <iframe src="https://www.youtube.com/watch?v=ohWhMm75jvo" title="Home-admin tutorial" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe id="youtubeIframe" src="https://www.youtube.com/watch?v=ohWhMm75jvo" title="Home-admin tutorial" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-      </section>
+    </section>
 
     <!-- 메인소개 -->
     <section class="main-info">
@@ -161,7 +165,7 @@
     </section>
     
     <!-- 이달의 브랜드 -->
-     <section class="monthlyBrand">
+    <section class="monthlyBrand">
         <div class="con">
             <p class="title">이달의 브랜드</p>
 
@@ -195,7 +199,7 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- best -->
     <section class="best">
@@ -554,12 +558,10 @@
                         상담은 카카오 채팅으로 가능합니다.
                     </p>
                     <span>
-                        대표번호:
-                        <a href="#">142-04-19854</a>
+                        대표번호: 142-04-19854
                     </span>
                     <span>
-                        메일:
-                        <a href="#">yohan098@naver.com</a>
+                        메일: yohan098@naver.com
                     </span>
                     <span>
                         사업자등록번호: 142-04-19854

@@ -432,7 +432,7 @@ img {
     padding-bottom: 140px;
 }
 
-.video span {
+.video p {
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 52px;
@@ -440,10 +440,13 @@ img {
 
 .video .video-box {
     position: relative;
-    padding-bottom: 46.25%;
-    width: 100%;
+    padding-bottom: 46%;
+    width: 70%;
+    height: 0;
     display: block;
+    margin: 0 auto;
     overflow: hidden;
+    transition: width 0.3s ease;
 }
 
 .video iframe {
@@ -526,13 +529,13 @@ img {
     transform: scale(.77) translateZ(0);
 }
 
-          
+
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide.swiper-slide-active {  
     transform: scale(1) !important;
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide.swiper-slide-active {
-  transform: scale(1) translateZ(0) !important;
+    transform: scale(1) translateZ(0) !important;
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a {     
@@ -644,9 +647,6 @@ img {
     width: 100%;
 }
 
-.best .best-swiper .swiper-slide > a:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-}
 
 .best .best-swiper .swiper-slide > a:hover .img-box > img{
     transform: scale(1.1);
