@@ -410,19 +410,19 @@ img {
     margin: 0; 
     position: absolute;    
     top: 50%;
-    transform: translateY(-50%);    
+    border: 2px solid red;   
 }
 
 .visual .visual-swiper .swiper-button-prev {
     background-image: url(/homebaristaimage/배너-prev.svg);
     left: 10%;
-    transform: translateX(50px);
+    transform: translate(50px, -50%);
 }
 
 .visual .visual-swiper .swiper-button-next {
     background-image: url(/homebaristaimage/배너-next.svg);
     right: 10%;
-    transform: translateX(-50px);
+    transform: translate(-50px, -50%);
 }
 /* 섹션 visual 끝 */
 
@@ -441,7 +441,7 @@ img {
 .video .video-box {
     position: relative;
     padding-bottom: 46%;
-    width: 70%;
+    width: 60%;
     height: 0;
     display: block;
     margin: 0 auto;
@@ -480,9 +480,38 @@ img {
 
 .main-info .txt p:nth-child(2) {
     margin: 10px 0;
+}
+
+.main-info .txt p:nth-child(2) > span {
+    position: relative;
+    top: 10px;
     font-size: 52px;
     font-weight: 800;
     color: #D36E6B;
+    display: inline-block;
+    animation: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate; 
+    animation-delay: 2s;
+    animation-timing-function: ease;  
+}
+
+.main-info .txt p:nth-child(2) > span:nth-child(2) { animation-delay: .1s; }
+.main-info .txt p:nth-child(2) > span:nth-child(3) { animation-delay: .2s; }
+.main-info .txt p:nth-child(2) > span:nth-child(4) { animation-delay: .3s; }
+.main-info .txt p:nth-child(2) > span:nth-child(5) { animation-delay: .4s; }
+.main-info .txt p:nth-child(2) > span:nth-child(6) { animation-delay: .5s; }
+.main-info .txt p:nth-child(2) > span:nth-child(7) { animation-delay: .6s; }
+.main-info .txt p:nth-child(2) > span:nth-child(8) { animation-delay: .7s; }
+.main-info .txt p:nth-child(2) > span:nth-child(9) { animation-delay: .8s; }
+.main-info .txt p:nth-child(2) > span:nth-child(10) { animation-delay: .9s; }
+.main-info .txt p:nth-child(2) > span:nth-child(11) { animation-delay: 1s; }
+
+
+@keyframes bounce {100% {
+        transform: translateY(-10px); 
+    }
 }
 
 .main-info .txt p:nth-child(3) {
@@ -510,7 +539,7 @@ img {
 
 .monthlyBrand .title {
     text-align: center;
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 700;
     margin-bottom: 5%;
 }
@@ -752,7 +781,21 @@ img {
 
 .review .swiper-slide .img-box {
     width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* aspect-ratio: 4/3; 이것만 주는 방법도 있음*/
 }
+
+.review .swiper-slide .img-box::before {
+    content: "";
+    padding-bottom: 66%;
+    display: block;
+}
+
+.review .swiper-slide .img-box > img {
+    position: absolute;
+}
+
 
 .review .swiper-slide .star-box {
     display: flex;
@@ -769,6 +812,12 @@ img {
 
 .review .swiper-slide .txt-box {
     padding: 12px;
+    min-height: 72px;
+    p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;  
+    }
 }
 /* 섹션 reviw 끝 */
 
@@ -783,7 +832,7 @@ img {
     display: flex;
     align-items: center;
     gap: 86px;
-    animation: marquee 70s linear infinite ;
+    animation: marquee 80s linear infinite ;
 }
 
 @keyframes marquee {
@@ -807,6 +856,7 @@ img {
     margin-top: 32px;
     column-gap: 74px;
     row-gap: 32px;
+    position: relative;
 }
 
 .company .grid > li > a {
@@ -814,7 +864,19 @@ img {
     height: 220px;    
     overflow: hidden;
     border-radius: 50px;
+    position: relative;
+    transition: transform .3s;
 }
+
+.company .grid > li > a:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* aspect-ratio: 4/3;
+    transform: scale(1);     */
+}
+
 /* 원두협력업체company 끝 */
 
 

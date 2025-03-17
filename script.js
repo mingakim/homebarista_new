@@ -35,11 +35,6 @@ $(".icons .search-box > button").click(function () {
 });
 
 
-// // .main .txt-box aos
-// setTimeout(function () {
-//   AOS.init();
-// }, 500);
-
 
 // visual-swiper
 var swiper = new Swiper(".visual-swiper", {
@@ -53,21 +48,24 @@ var swiper = new Swiper(".visual-swiper", {
 });
 
 
-// video
+// video  크기효과
 gsap.registerPlugin(ScrollTrigger);
 
-// iframe 크기 변화 애니메이션
 gsap.to(".video-box", {
     width: "100%",  
     scrollTrigger: {
         trigger: ".video-box", // 스크롤을 추적할 요소
         start: "top 85%",  // 시작 위치: 요소가 화면에 들어올 때
-        end: "bottom bottom",    // 끝 위치: 요소가 화면을 벗어날 때
+        end: "bottom bottom",    // 끝 위치: video-box의 하단이 화면 bottom에 도달할때
         scrub: true,          // 스크롤에 비례하여 애니메이션 진행
         markers: false,       // 디버깅용 마커 표시 (필요시 true로 설정)
         ease: "none"          // 스크롤에 맞춰 자연스럽게 애니메이션
     }
 });
+
+
+// main-info txt aos 효과
+AOS.init();
 
 
 
@@ -115,11 +113,16 @@ var mainSwiper = new Swiper(".best-swiper", {
 
 // review 스와이퍼
 var swiper = new Swiper(".review-swiper", {
-  slidesPerView: 4,
+  slidesPerView: 2,
   spaceBetween: 66,
   loop: true,
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    995: {
+      slidesPerView: 4, 
+    },
+  },  
 });
