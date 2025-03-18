@@ -41,9 +41,16 @@ var swiper = new Swiper(".visual-swiper", {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 80,
-  navigation: {
-    nextEl: ".visual .swiper-button-next",
-    prevEl: ".visual .swiper-button-prev"
+  // navigation: {
+  //   nextEl: ".visual .swiper-button-next",
+  //   prevEl: ".visual .swiper-button-prev"
+  // },
+  pagination: {
+    el: ".visual .swiper-pagination",
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
   },
 });
 

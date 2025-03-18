@@ -87,10 +87,7 @@ a {
 }
 
 .icon {
-    display: inline-flex;
-    width: 36px;
-    height: 36px;
-    justify-content: center;
+    display: block;
     align-items: center;
 }
 
@@ -272,8 +269,10 @@ img {
 
 .icons {
     align-items: center;
-    gap: 24px;
+    justify-content: center;
+    gap: 30px;
 }
+
 
 .icons .search-box {
     align-items: center;
@@ -441,7 +440,6 @@ img {
     position: relative;
     padding-bottom: 46%;
     width: 60%;
-    height: 0;
     display: block;
     margin: 0 auto;
     overflow: hidden;
