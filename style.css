@@ -44,6 +44,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PartialSansKR-Regular';
+    src: url('/font/파셜산스/PartialSansKR-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     font-family: "Pretendard-Regular";
 }
@@ -68,7 +76,7 @@ a {
 /* 변수 */
 :root {
     --black: #333333;
-    --main: #b2986d;
+    --main: #F4E5CC;
     --view-more: #999999;
 }
 
@@ -422,6 +430,11 @@ img {
     right: 10%;
     transform: translate(-50px, -50%);
 }
+
+.visual .visual-swiper .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
 /* 섹션 visual 끝 */
 
 /* video 시작 */
@@ -480,8 +493,7 @@ img {
 }
 
 .main-info .txt p:nth-child(2) > span {
-    position: relative;
-    top: 10px;
+    position: relative;    
     font-size: 52px;
     font-weight: 800;
     color: #D36E6B;
@@ -603,8 +615,7 @@ img {
 .monthlyBrand .monthly-main .monthly-swiper .swiper-button {
     width: 44px;
     height: 44px;
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, .6);  
+    border-radius: 100%;    
     background-repeat: no-repeat;
     background-position: center;
     margin: 0; 
@@ -685,7 +696,7 @@ img {
 }
 
 .best .best-swiper .swiper-slide .img-box {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -712,7 +723,7 @@ img {
 
 .best .best-swiper .swiper-slide .txt-box p:last-child {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
     padding-bottom: 12px;
 }
@@ -720,7 +731,7 @@ img {
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
     font-size: 20px;
     font-weight: 600;
-    color: #B3B3B3;
+    color: #C1C1C1;
     position: relative;
 }
 
@@ -728,7 +739,7 @@ img {
     content: "";
     width: 100%;
     height: 1.5px;
-    background-color: #B3B3B3;
+    background-color: #C1C1C1;
     position: absolute;
     top: 50%;
     left: 0;
@@ -737,8 +748,8 @@ img {
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:last-child {
     font-size: 22px;
-    font-weight: 800;
-    color: var(--main);
+    font-weight: 900;
+    color: #D7BF97;
 }  
 /* 섹션 best끝 */
 
@@ -851,8 +862,8 @@ img {
 
 .company .grid {
     margin-top: 32px;
-    column-gap: 74px;
-    row-gap: 74px;
+    column-gap: 85px;
+    row-gap: 85px;
     z-index: 40; 
     position: relative;   
     transition: all .3s;
@@ -942,7 +953,7 @@ footer {
 
 footer .f-top {
     padding: 24px 0;
-    background-color: #CDBA9A;
+    background-color: var(--main);
 }
 
 footer .f-top > .con {
@@ -967,7 +978,7 @@ footer .f-bottom {
 
 footer .f-bottom > .con {
     display: flex;
-    gap: 439px;
+    justify-content: space-between;
 }
 
 footer .f-bottom .info span {
