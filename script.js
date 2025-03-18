@@ -126,3 +126,16 @@ var swiper = new Swiper(".review-swiper", {
     },
   },  
 });
+
+
+
+// company 효과
+$(".company .grid > li").mouseenter(function(){
+  $(this).parent(".grid").addClass("black");
+  $(this).children("a").addClass("big");
+  $(this).siblings("li").children("a").addClass("small");
+}).mouseleave(function(){
+  $(this).parent(".grid").removeClass("black");
+  $(this).children("a").removeClass("big");
+  $(this).siblings("li").children("a").removeClass("small");
+});
