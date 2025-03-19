@@ -63,7 +63,7 @@ gsap.to(".video-box", {
     scrollTrigger: {
         trigger: ".video-box", // 스크롤을 추적할 요소
         start: "top 85%",  // 시작 위치: 요소가 화면에 들어올 때
-        end: "bottom bottom",    // 끝 위치: video-box의 하단이 화면 bottom에 도달할때
+        end: "bottom 100%",    // 끝 위치: video-box의 하단이 화면 bottom에 도달할때
         scrub: true,          // 스크롤에 비례하여 애니메이션 진행
         markers: false,       // 디버깅용 마커 표시 (필요시 true로 설정)
         ease: "none"          // 스크롤에 맞춰 자연스럽게 애니메이션
