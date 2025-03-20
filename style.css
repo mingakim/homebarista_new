@@ -139,15 +139,6 @@ a {
 }
 
 /* 공통 */
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 48px;
-    font-weight: 800;
-}
-
 h2 {
     font-size: 32px;
     font-weight: 700;
@@ -481,15 +472,69 @@ img {
     min-height: 730px;
 }
 
+.main-info {
+    padding-top: 130px;
+    padding-bottom: 194px;
+}
+
 .main-info .con {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
 }
 
-.main-info .big-logo > ul {
-    
+.main-info .big-logo > ul {    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 0 8px;
 }
+
+.main-info ul > .flip-card-container {
+    max-width: 77px;
+    width: calc(100% / 6);
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.flip-card  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flip-card .flip_front,
+.flip-card .flip_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* 반대면이 보이지 않도록 */
+}   
+
+/* 뒷면 스타일 */
+.flip-card .flip_back {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    word-break: keep-all;
+    padding: 3px;    
+}
+
+/* 플립 카드 뒤집기 효과 */
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+    transform: rotateY(180deg);
+}
+
 
 .main-info .txt p:first-child {
     margin-bottom: 8px;
@@ -540,14 +585,24 @@ img {
 /* 섹션 이달의브랜드 시작 */
 .monthlyBrand {
     padding: 170px 0;
-    background-color: #F9ECE8;    
+    background-color: #F5FDFF;    
 }
 
 .monthlyBrand .title {
     text-align: center;
+    margin-bottom: 6%;
+}
+
+.monthlyBrand .title > span {    
     font-size: 52px;
     font-weight: 700;
-    margin-bottom: 5%;
+}
+
+.monthlyBrand .title > p {
+    font-size: 21px;
+    color: #B3B3B3;
+    margin-top: 16px;
+    font-style: italic;
 }
 
 .monthlyBrand .monthly-swiper {
@@ -558,6 +613,11 @@ img {
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide {
     transform: scale(0.77);
     transition: all .3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    aspect-ratio: 3/4;
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide {
@@ -573,23 +633,23 @@ img {
     transform: scale(1) translateZ(0) !important;
 }
 
+
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a {     
     display: block;
     width: 100%;
+    height: 100%;
+    background-image: url(/homebaristaimage/이달의이미지1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide .img-box {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide .img-box::after {
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
     font-size: 24px;
@@ -604,7 +664,7 @@ img {
     transition: all .3s;
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a:hover .img-box::after {
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide:hover::after {
     content: "자세히 보기";
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -709,20 +769,28 @@ img {
     left: 10px;
     bottom: 10px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
     border-radius: 2px;
 }
 
-.best .best-swiper .swiper-slide .txt-box p:first-child {
+.best .best-swiper .swiper-slide .txt-box .tit {
     font-size: 22px;
     font-weight: 700;
+}
+
+.best .best-swiper .swiper-slide .txt-box .sub-tit {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8C8C8C;
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child {
     display: flex;
     gap: 12px;
     align-items: center;
-    padding-bottom: 12px;
+    margin-top: 16px;
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
@@ -817,13 +885,18 @@ img {
 
 .review .swiper-slide .txt-box {
     padding: 12px;
-    min-height: 72px;
-    p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;  
-    }
+    height: 96px;
+    overflow: hidden;  
 }
+
+.review .swiper-slide .txt-box > p {
+    display: -webkit-box; /* 텍스트를 여러 줄로 만들기 위한 설정 */
+    -webkit-line-clamp: 3; /* 최대 3줄로 제한 (필요에 따라 조정) */
+    -webkit-box-orient: vertical; /* 세로 방향으로 박스를 정렬 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis;
+}
+
 /* 섹션 reviw 끝 */
 
 
@@ -915,13 +988,13 @@ img {
     display: flex;
     gap: 14px;
     align-items: center;
-    padding: 20px 40px;
+    padding: 16px 40px;
     border: 1px solid #DADADA;
     border-radius: 40px;
 }
 
-.sns .grid > li > a:hover span {
-    text-decoration: underline;
+.sns .grid > li > a:hover  {
+    border-color: var(--black);
 }
 
 .sns .grid > li > a > span {

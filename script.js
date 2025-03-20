@@ -84,6 +84,7 @@ var swiper = new Swiper(".monthly-swiper", {
   // spaceBetween: 135,
   centeredSlides: true,
   loop: true,
+  loopedSlides: 2,
   // watchOverflow : true,
   navigation: {
     nextEl: ".monthly-swiper .swiper-button-next",
