@@ -76,30 +76,49 @@ AOS.init();
 
 
 
+// monthly-swiper scale모드
+// let $swiperPrev = document.querySelector('.monthly-swiper .swiper-button-prev');
+// var swiper = new Swiper(".monthly-swiper", {
+//   slidesPerView: 3,
+//   // spaceBetween: 135,
+//   centeredSlides: true,
+//   loop: true,
+//   loopedSlides: 2,
+//   // watchOverflow : true,
+//   navigation: {
+//     nextEl: ".monthly-swiper .swiper-button-next",
+//     prevEl: ".monthly-swiper .swiper-button-prev",
+//   },
+//   // on: {
+//   //   activeIndexChange : function() {
+//   //     if (this.realIndex == 0) {
+//   //       $swiperPrev.classList.add('swiper-button-disabled');
+//   //       startNum = false;
+//   //     } else {
+//   //       $swiperPrev.classList.remove('swiper-button-disabled');
+//   //     }
+//   //   }
+//   // }
+// });
 
 // monthly-swiper
-// let $swiperPrev = document.querySelector('.monthly-swiper .swiper-button-prev');
 var swiper = new Swiper(".monthly-swiper", {
-  slidesPerView: 3,
-  // spaceBetween: 135,
+  effect: "coverflow",
+  grabCursor: true,
   centeredSlides: true,
-  loop: true,
-  loopedSlides: 2,
-  // watchOverflow : true,
-  navigation: {
-    nextEl: ".monthly-swiper .swiper-button-next",
-    prevEl: ".monthly-swiper .swiper-button-prev",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 200,
+    modifier: 2,
+    slideShadows: true,
   },
-  // on: {
-  //   activeIndexChange : function() {
-  //     if (this.realIndex == 0) {
-  //       $swiperPrev.classList.add('swiper-button-disabled');
-  //       startNum = false;
-  //     } else {
-  //       $swiperPrev.classList.remove('swiper-button-disabled');
-  //     }
-  //   }
-  // }
+  loop: true,
+  navigation: {
+    nextEl: ".monthly-main .swiper-button-next",
+    prevEl: ".monthly-main .swiper-button-prev",
+  },  
+  slidesPerView: 3,  
 });
 
 
@@ -138,12 +157,3 @@ var swiper = new Swiper(".review-swiper", {
 
 
 // company 효과
-$(".company .grid > li").mouseenter(function(){
-  $(this).parent(".grid").addClass("black");
-  $(this).children("a").addClass("big");
-  $(this).siblings("li").children("a").addClass("small");
-}).mouseleave(function(){
-  $(this).parent(".grid").removeClass("black");
-  $(this).children("a").removeClass("big");
-  $(this).siblings("li").children("a").removeClass("small");
-});

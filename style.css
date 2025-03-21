@@ -605,25 +605,36 @@ img {
     font-style: italic;
 }
 
-.monthlyBrand .monthly-swiper {
-    overflow: hidden;
+.monthlyBrand .monthly-main { 
+    width: 100%;
     position: relative;
 }
+
+.monthlyBrand .monthly-main .monthly-swiper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide {
-    transform: scale(0.77);
-    transition: all .3s ease-in-out;
+    /* transform: scale(0.77); */
+    /* transition: all .3s ease-in-out; */
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
-    width: 50%;
-    aspect-ratio: 3/4;
+    max-width: 460px;
+    max-height: 544px;
+    aspect-ratio: 115/136; 
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto;
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide {
+
+/* 스와이퍼 active scale모드 */
+/* .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide {
     transform: scale(.77) translateZ(0);
 }
-
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide.swiper-slide-active {  
     transform: scale(1) !important;
@@ -631,26 +642,68 @@ img {
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide.swiper-slide-active {
     transform: scale(1) translateZ(0) !important;
-}
+} */
 
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a {     
-    display: block;
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(/homebaristaimage/이달의이미지1.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-one {
+    background-image: url(/homebaristaimage/이달의브랜드1.svg);
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-two {
+    background-image: url(/homebaristaimage/이달의브랜드2.svg);
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-three {
+    background-image: url(/homebaristaimage/이달의브랜드3.svg);
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box {
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+    transform: translateY(100%);  
+    transition: all 0.3s ease-out; 
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide-active .txt-box {
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(0);  
 }
 
 
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box > span {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;    
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide::after {
-    content: "";
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthlyBrand .monthly-main .monthly-swiper .swiper-slide-active:hover a::after {
+    content: "자세히 보기";
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     font-size: 24px;
     font-weight: 500;
@@ -664,12 +717,8 @@ img {
     transition: all .3s;
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-slide:hover::after {
-    content: "자세히 보기";
-    background-color: rgba(0, 0, 0, 0.6);
-}
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-button {
+.monthlyBrand .monthly-main .swiper-button {
     width: 44px;
     height: 44px;
     border-radius: 100%;    
@@ -681,14 +730,14 @@ img {
     transform: translateY(-50%);
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-button-prev {
+.monthlyBrand .monthly-main .swiper-button-prev {
     background-image: url(/homebaristaimage/이달의브랜드prev.svg);
-    left: calc(33.3333% - 25px);
+    left: 5%;
 }
 
-.monthlyBrand .monthly-main .monthly-swiper .swiper-button-next {
+.monthlyBrand .monthly-main .swiper-button-next {
     background-image: url(/homebaristaimage/이달의브랜드next.svg);
-    right: calc(33.3333% - 25px);
+    right: 5%;
 }
 
 /* 섹션 이달의브랜드 끝 */
@@ -934,39 +983,40 @@ img {
     margin-top: 32px;
     column-gap: 85px;
     row-gap: 85px;
-    z-index: 40; 
     position: relative;   
     transition: all .3s;
 }
 
-.company .grid.black {
-    background-color: rgba(0, 0, 0, .6);  
-    border-radius: 25px;    
-}
-
-
-.company .grid > li {
-    position: relative;
-    z-index: 1;
-}
 
 .company .grid > li > a {
     width: 220px;
     height: 220px;    
     overflow: hidden;
     border-radius: 50px;   
+    position: relative;
     transition: transform .4s;
 }
 
-.company .grid > li > a.big {
+.company .grid > li > a > .hover-box {
     position: absolute;
     top: 0;
-    left: 0;      
-    transform: scale(2);   
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
 }
 
-.company .grid > li > a.small {
-    transform: scale(.7);   
+.company .grid > li:hover > a > .hover-box {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* 원두협력업체company 끝 */
