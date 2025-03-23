@@ -3,11 +3,11 @@ $(function () {
   var headerTop = $(".header-top");
   var header = $(".header");
   var logo = $(".header .logo");
-  var scrollHeader = $(".scroll-header");
+  var scrollHeader = $("#scroll-header");
   var minHeight = $(".headerWrap .min-hight");
   var headerTopHeight = headerTop.outerHeight(); // headertop의 높이값
 
-  // 스크롤 이벤트
+  
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop(); // 현재 스크롤 위치
 
@@ -28,11 +28,16 @@ $(function () {
   });
 });
 
+
+
 // 헤더-검색버튼 클릭
 $(".icons .search-box > button").click(function () {
   $(".icons .search-box").addClass("active");
   $(".icons .search-box > input[type=text]").addClass("active");
 });
+
+
+
 
 
 
@@ -55,6 +60,9 @@ var swiper = new Swiper(".visual-swiper", {
 });
 
 
+
+
+
 // video  크기효과
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +77,8 @@ gsap.to(".video-box", {
         ease: "none"          // 스크롤에 맞춰 자연스럽게 애니메이션
     }
 });
+
+
 
 
 // main-info txt aos 효과
@@ -101,6 +111,7 @@ AOS.init();
 //   // }
 // });
 
+
 // monthly-swiper
 var swiper = new Swiper(".monthly-swiper", {
   effect: "coverflow",
@@ -122,6 +133,9 @@ var swiper = new Swiper(".monthly-swiper", {
 });
 
 
+
+
+
 // best-swiper슬라이더
 var mainSwiper = new Swiper(".best-swiper", {
   slidesPerView: 1.5,
@@ -138,9 +152,11 @@ var mainSwiper = new Swiper(".best-swiper", {
 });
 
 
+
+
 // review 스와이퍼
 var swiper = new Swiper(".review-swiper", {
-  slidesPerView: 2,
+  slidesPerView: 1.5,
   spaceBetween: 66,
   loop: true,
   autoplay: {
@@ -148,6 +164,9 @@ var swiper = new Swiper(".review-swiper", {
     disableOnInteraction: false,
   },
   breakpoints: {
+    765: {
+      slidesPerView: 2.5,
+    },
     995: {
       slidesPerView: 4, 
     },
