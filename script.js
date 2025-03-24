@@ -139,15 +139,23 @@ var swiper = new Swiper(".monthly-swiper", {
 // best-swiper슬라이더
 var mainSwiper = new Swiper(".best-swiper", {
   slidesPerView: 1.5,
-  spaceBetween: 94,
+  spaceBetween: 54,
   navigation: {
     nextEl: ".best .swiper-button-next",
     prevEl: ".best .swiper-button-prev",
   },
-  breakpoints: {  
-    765: {
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 48,      
+    },
+    
+    1150: {
       slidesPerView: 3,
-    }
+      spaceBetween: 94, 
+      
+    },
   },  
 });
 
@@ -156,19 +164,21 @@ var mainSwiper = new Swiper(".best-swiper", {
 
 // review 스와이퍼
 var swiper = new Swiper(".review-swiper", {
-  slidesPerView: 1.5,
-  spaceBetween: 66,
+  slidesPerView: 1.3,
+  spaceBetween: 50,
   loop: true,
   autoplay: {
     delay: 3500,
     disableOnInteraction: false,
   },
   breakpoints: {
-    765: {
-      slidesPerView: 2.5,
+    768: {
+      slidesPerView: 2.3,
     },
-    995: {
-      slidesPerView: 4, 
+
+    1250: {
+      slidesPerView: 4,
+      spaceBetween: 66, 
     },
   },  
 });

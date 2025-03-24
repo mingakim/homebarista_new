@@ -158,6 +158,18 @@ img {
 }
 
 
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
 
 /* 커스텀 */
 /* 헤더탑 시작 */
@@ -182,66 +194,6 @@ img {
 
 
 /* 헤더 시작 */
-@media screen and (max-width: 1260px) { 
-    .header .logo {
-        position: static !important;
-        transform: translate(0) !important;
-    }
-}
-
-@media screen and (min-width: 765px) and  (max-width: 1260px) {
-    .header > .con {
-        justify-content: space-between !important;
-    }
-
-    .header .logo > img {
-        width: 280px;
-    } 
-}
-
-@media screen and (max-width: 765px) {
-    .header-top {
-        display: none;
-    }
-
-    .header {
-        display: block !important;
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 300;
-        padding-bottom: 0 !important;
-    }
-
-    .header .con {
-        display: block;
-    }
-    
-    .header .logo > img {
-        width: 200px;
-    }
-
-    .header .small-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header .small-header .sub-menu {
-        display: block;
-    }
-    
-    .icons .search-box > input[type="text"] {
-        max-width: 110px !important;
-    }
-    
-    .menu-box  {
-        display: none !important;
-    }
-}
-
-
 .header {
     padding-top: 16px;
     padding-bottom: 30px;
@@ -308,7 +260,67 @@ img {
     cursor: pointer;
 }
 
+.mb-header {
+    display: none;
+}
+
+.mb-header .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 36px;
+
+}
+
+.mb-header .con .mb-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mb-header .con .mb-icon {
+    display: flex;
+    gap: 6px;
+}
+
+
+@media screen and (max-width: 1260px) { 
+    .header .logo {
+        position: static !important;
+        transform: translate(0) !important;
+    }
+}
+
+@media screen and (min-width: 768px) and  (max-width: 1260px) {
+    .header > .con {
+        justify-content: space-between !important;
+    }
+
+    .header .logo > img {
+        width: 280px;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .pc-header {
+        display: none;
+    }
+
+    .mb-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 300;
+    }    
+}
+
 /* 헤더 끝 */
+
 
 
 /* 메뉴박스 시작 */
@@ -341,7 +353,7 @@ img {
 }
 
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
     .header.hidden {
         display: none;
     }
@@ -367,7 +379,6 @@ img {
     #scroll-header.fixed .logo-icon {
         display: flex;
         justify-content: center;
-        margin: 0 20px;
     } 
 
 
@@ -478,7 +489,7 @@ img {
 }
 
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
     .video p {
         font-size: 54px;
         margin-bottom: 32px;
@@ -603,7 +614,7 @@ img {
     }    
 }
 
-@media screen and (max-width: 990px) { 
+@media screen and (max-width: 1024px) { 
     .main-info {
         padding-top: 20px;
         padding-bottom: 100px;
@@ -804,20 +815,20 @@ img {
 
 /* 섹션 best 시작 */
 .best {
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
 }
 
 .best .s-title {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
 
 .best .s-title .swiper-button-wrap {
     position: relative;
     display: flex;
-    gap: 45px;
+    gap: 2.8rem;
 }
 
 .best .s-title .swiper-button-wrap .swiper-button {
@@ -862,7 +873,7 @@ img {
 }
 
 .best .best-swiper .swiper-slide .img-box {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     position: relative;
 }
 
@@ -873,37 +884,40 @@ img {
 
 .best .best-swiper .swiper-slide .img-box .review-box {    
     position: absolute;
-    padding: 2px 8px;
+    padding: 0.125rem 0.5rem;
     background-color: rgba(0, 0, 0, 0.4);
     left: 10px;
     bottom: 10px;
     color: #fff;
     font-weight: 500;
-    font-size: 14px;
-    border-radius: 2px;
+    font-size: 0.875rem;
+    border-radius: 0.125rem;
 }
 
 .best .best-swiper .swiper-slide .txt-box .tit {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .best .best-swiper .swiper-slide .txt-box .sub-tit {
-    margin-top: 4px;
-    font-size: 16px;
+    margin-top: 0.25rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #8C8C8C;
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child {
     display: flex;
-    gap: 12px;
+    gap: 0.75rem;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
-    font-size: 20px;
+    font-size: 1.25rme;
     font-weight: 400;
     color: #c5c5c5;
     position: relative;
@@ -912,7 +926,7 @@ img {
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child::after {
     content: "";
     width: 100%;
-    height: 1.5px;
+    height: 1px;
     background-color: #c5c5c5;
     position: absolute;
     top: 50%;
@@ -921,10 +935,17 @@ img {
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:last-child {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     color: var(--black);
 }  
+
+@media screen and (max-width: 768px) {
+    .best .s-title .swiper-button-wrap {
+        display: none;
+    }
+
+}
 /* 섹션 best끝 */
 
 
@@ -1002,8 +1023,9 @@ img {
     display: -webkit-box; /* 텍스트를 여러 줄로 만들기 위한 설정 */
     -webkit-line-clamp: 3; /* 최대 3줄로 제한 (필요에 따라 조정) */
     -webkit-box-orient: vertical; /* 세로 방향으로 박스를 정렬 */
-    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    overflow: hidden; 
     text-overflow: ellipsis;
+    font-size: 1rem;
 }
 
 /* 섹션 reviw 끝 */
@@ -1088,14 +1110,13 @@ img {
 
 
 /* sns시작 */
-@media screen and (max-width: 765px) {    
+@media screen and (max-width: 768px) {    
 
     .sns .grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 24px !important;
     }
 }
-
 
 .sns {
     padding-top: 60px;
@@ -1138,6 +1159,8 @@ img {
     object-fit: cover;
 }
 /* sns 끝 */
+
+
 
 /* footer 시작 */
 footer {
