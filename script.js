@@ -155,7 +155,7 @@ var swiper = new Swiper(".mb-monthly-swiper", {
 // best-swiper슬라이더
 var mainSwiper = new Swiper(".best-swiper", {
   slidesPerView: 1.5,
-  spaceBetween: 54,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".best .swiper-button-next",
     prevEl: ".best .swiper-button-prev",

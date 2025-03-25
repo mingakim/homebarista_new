@@ -98,6 +98,7 @@ a {
 .view-more {
     font-weight: 500;
     color: var(--view-more);
+    padding-top: 10px;
 }
 
 .brand-color {
@@ -162,12 +163,19 @@ img {
     html {
         font-size: 15px;
     }
+    h2 {
+        font-size: 26px;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 }
 
@@ -751,6 +759,10 @@ img {
     font-size: 18px    
 }
 
+.main-info .txt p:nth-child(3) > span {
+    display: block;
+}
+
 .main-info .txt p:nth-child(4) {
     padding-top: 24px;
     padding-bottom: 46px;
@@ -794,8 +806,59 @@ img {
 }
 
 @media screen and (max-width: 768px)  {
+    .main-info {
+        padding-bottom: 30px;
+    }
+
     .main-info .con {
         gap: 44px;
+    }
+
+    .main-info .txt p:nth-child(3) .block:first-child {
+        display: block;
+    }
+
+    .main-info .txt p:first-child {
+        padding-bottom: 4px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .main-info .txt p:nth-child(2) {
+        padding: 10px 0;
+    }
+    
+    .main-info .txt p:nth-child(2) > span {
+        font-size: 40px;     
+    }
+    
+    .main-info .txt p:nth-child(2) > span::after {
+        height: 11px;
+        bottom: 6px;
+    }
+    
+    .main-info .txt p:nth-child(3) {
+        padding-top: 22px;
+        font-size: 15px;
+    }
+
+    .main-info .txt p:nth-child(3) > span {
+       padding: 10px 0;
+    }
+
+    .main-info .txt p:nth-child(4) {
+        display: none;
+    }
+    
+    .main-info .txt p:last-child {
+        padding-top: 32px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 440px)  {
+    .main-info .con {
+        gap: 34px;
     }
 
     .main-info .txt p .block {
@@ -813,7 +876,7 @@ img {
     }
     
     .main-info .txt p:nth-child(2) > span {
-        font-size: 20px;     
+        font-size: 28px;     
     }
     
     .main-info .txt p:nth-child(2) > span::after {
@@ -826,11 +889,8 @@ img {
         font-size: 14px;
     }
 
-    .main-info .txt p:nth-child(3) > .margin {
-        display: block;
-        margin: 20px 0 !important;
-
-        /* div로 수정해보기 */
+    .main-info .txt p:nth-child(3) > span {
+       padding: 6px 0;
     }
 
     .main-info .txt p:nth-child(4) {
@@ -838,7 +898,7 @@ img {
     }
     
     .main-info .txt p:last-child {
-        padding-top: 24px;
+        padding-top: 22px;
         font-size: 14px;
     }
 }
@@ -1156,7 +1216,7 @@ img {
 }
 
 .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
-    font-size: 1.25rme;
+    font-size: 1.25rem;
     font-weight: 400;
     color: #c5c5c5;
     position: relative;
@@ -1183,14 +1243,28 @@ img {
     .best .s-title .swiper-button-wrap {
         display: none;
     }
-
 }
+
+@media screen and (max-width: 440px) {
+    .best .best-swiper .swiper-slide .txt-box .tit {
+        font-size: 16px;
+    }
+       
+    .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
+        font-size: 14px;
+    }
+    
+    .best .best-swiper .swiper-slide .txt-box p:last-child span:last-child {
+        font-size: 16px;
+    }  
+}
+
 /* 섹션 best끝 */
 
 
 /* 섹션 review 시작 */
 .review {
-    margin: 90px 0;
+    padding: 5rem 0;
 }
 
 .s-title > .view-more {
@@ -1213,7 +1287,7 @@ img {
 
 .review .review-swiper {
     overflow: hidden;
-    margin-top: 32px;
+    margin-top: 2rem;
     padding: 8px 0;
 }
 
@@ -1267,12 +1341,17 @@ img {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+    .review .swiper-slide .star-box > span:first-child {
+        font-size: 13px;
+    }
+}
 /* 섹션 reviw 끝 */
 
 
 /* marquee-slide 시작 */
 .marquee {
-    padding: 60px 0;
+    padding: 3.75rem 0;
     overflow: hidden;    
 }
 
@@ -1357,13 +1436,6 @@ img {
 
 
 /* sns시작 */
-@media screen and (max-width: 768px) {    
-
-    .sns .grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 24px !important;
-    }
-}
 
 .sns {
     padding-top: 60px;
@@ -1372,14 +1444,14 @@ img {
 
 .sns .grid {
     gap: 72px;
-    margin-top: 32px;
+    margin-top: 2rem;
 }
 
 .sns .grid > li > a {
     display: flex;
     gap: 14px;
     align-items: center;
-    padding: 16px 40px;
+    padding: 1rem 2.5rem;
     border: 1px solid #DADADA;
     border-radius: 40px;
 }
@@ -1405,6 +1477,36 @@ img {
     background-size: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1128px) {    
+    .sns .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px !important;
+    }
+}
+
+
+@media screen and (max-width: 725px) {    
+    .sns .grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .sns .grid > li > a > span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 440px) {    
+    .sns .grid {
+        gap: 16px;
+    }
+
+    .sns .grid > li > a > span {
+        font-size: 14px;
+    }
+}
+
 /* sns 끝 */
 
 
