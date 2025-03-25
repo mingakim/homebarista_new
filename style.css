@@ -260,30 +260,7 @@ img {
     cursor: pointer;
 }
 
-.mb-header {
-    display: none;
-}
 
-.mb-header .con {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 36px;
-
-}
-
-.mb-header .con .mb-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.mb-header .con .mb-icon {
-    display: flex;
-    gap: 6px;
-}
 
 
 @media screen and (max-width: 1260px) { 
@@ -302,23 +279,6 @@ img {
         width: 280px;
     } 
 }
-
-@media screen and (max-width: 768px) {
-    .pc-header {
-        display: none;
-    }
-
-    .mb-header {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        z-index: 300;
-    }    
-}
-
 /* 헤더 끝 */
 
 
@@ -399,18 +359,64 @@ img {
         margin-left: 30px;
     }
 
-    .headerWrap .min-hight.visible {
+    .headerWrap .min-height.visible {
         min-height: 150px;
         display: block;
     }
 }
-
 /* 메뉴박스 끝 */
 
+
 /* min-height */
-.headerWrap .min-hight {
+.headerWrap .min-height {
     display: none;
 }
+
+
+/* 모바일 헤더 */
+.mb-header {
+    display: none;
+}
+
+.mb-header .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 40px;
+
+}
+
+.mb-header .con .mb-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mb-header .con .mb-icon {
+    display: flex;
+    gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .pc-header {
+        display: none;
+    }
+
+    .mb-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 300;
+    }    
+}
+/* 모바일헤더 끝 */
+
+
 
 /* 섹션 visual 시작 */
 .visual {
@@ -454,8 +460,130 @@ img {
 .visual .visual-swiper .swiper-pagination-bullet-active {
     background: #fff;
 }
-
 /* 섹션 visual 끝 */
+
+
+
+/* mb-이달의 브랜드 시작 */
+#mb-monthlyBrand {    
+    display: none;
+    padding: 36px 0;
+    background-color: #F5FDFF; 
+    position: relative;
+    top: 40px;
+    overflow: hidden;
+}
+
+#mb-monthlyBrand .title {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+#mb-monthlyBrand .title > span {
+    font-size: 31px;
+    font-weight: 700;
+}
+
+#mb-monthlyBrand .mb-monthly-main .swiper-slide {
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 28/33;
+    border-radius: 10px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;    
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-one {
+    background-image: url(/homebaristaimage/이달의브랜드1.svg);
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-two {
+    background-image: url(/homebaristaimage/이달의브랜드2.svg);
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-three {
+    background-image: url(/homebaristaimage/이달의브랜드3.svg);
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide > div {
+    text-align: center;
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide .txt-box {
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    transform: translateY(100%);  
+    transition: all 0.3s ease-out; 
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide-active .txt-box {
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(0);  
+}
+
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide .txt-box > span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;    
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide .txt-box > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide a {
+    display: inline-block;
+    padding: 6px 36px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .visual {
+        display: none;
+    }
+    
+    .monthlyBrand {
+        display: none;
+    }
+
+    #mb-monthlyBrand {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #mb-monthlyBrand .title > span {
+        font-size: 26px;
+    }
+
+    #mb-monthlyBrand .mb-monthly-main .swiper-slide {
+        width: 85% !important;
+    }
+}
+
+
+/* mb-이달의 브랜드 끝 */
+
+
 
 /* video 시작 */
 .video {
@@ -492,9 +620,31 @@ img {
 @media screen and (max-width: 1024px) {
     .video p {
         font-size: 54px;
+        margin-bottom: 40px;
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .video p {
+        font-size: 32px;
         margin-bottom: 32px;
     }
+    .video .video-box {
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 470px) {
+    .video p {
+        font-size: 22px;
+        margin-bottom: 26px;
+    }
+    .video .video-box {
+        width: 100%;
+    }
+}
+
+
 /* video 끝 */
 
 
@@ -564,14 +714,18 @@ img {
 }
 
 
+.main-info .txt p .block {
+    display: none;
+}
+
 .main-info .txt p:first-child {
-    margin-bottom: 8px;
+    padding-bottom: 8px;
     font-size: 22px;
     font-weight: 600;
 }
 
 .main-info .txt p:nth-child(2) {
-    margin: 10px 0;
+    padding: 10px 0;
 }
 
 .main-info .txt p:nth-child(2) > span {
@@ -593,13 +747,13 @@ img {
 }
 
 .main-info .txt p:nth-child(3) {
-    margin-top: 36px;
-    font-size: 18px;
+    padding-top: 36px;
+    font-size: 18px    
 }
 
 .main-info .txt p:nth-child(4) {
-    margin-top: 28px;
-    margin-bottom: 46px;
+    padding-top: 24px;
+    padding-bottom: 46px;
     font-size: 18px;
 }
 
@@ -638,6 +792,56 @@ img {
         text-align: center;
     }    
 }
+
+@media screen and (max-width: 768px)  {
+    .main-info .con {
+        gap: 44px;
+    }
+
+    .main-info .txt p .block {
+        display: block;
+    }
+
+    .main-info .txt p:first-child {
+        padding-bottom: 0;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .main-info .txt p:nth-child(2) {
+        padding: 10px 0;
+    }
+    
+    .main-info .txt p:nth-child(2) > span {
+        font-size: 20px;     
+    }
+    
+    .main-info .txt p:nth-child(2) > span::after {
+        height: 7px;
+        bottom: 4px;
+    }
+    
+    .main-info .txt p:nth-child(3) {
+        padding-top: 12px;
+        font-size: 14px;
+    }
+
+    .main-info .txt p:nth-child(3) > .margin {
+        display: block;
+        margin: 20px 0 !important;
+
+        /* div로 수정해보기 */
+    }
+
+    .main-info .txt p:nth-child(4) {
+        display: none;
+    }
+    
+    .main-info .txt p:last-child {
+        padding-top: 24px;
+        font-size: 14px;
+    }
+}
 /* 섹션 main-info 끝 */
 
 
@@ -650,7 +854,7 @@ img {
 
 .monthlyBrand .title {
     text-align: center;
-    margin-bottom: 6%;
+    margin-bottom: 80px;
 }
 
 .monthlyBrand .title > span {    
@@ -681,22 +885,19 @@ img {
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide {
-    /* transform: scale(0.77); */
-    /* transition: all .3s ease-in-out; */
+    transform: scale(0.7);
+    transition: all .3s ease-in-out;
     border-radius: 10px;
     overflow: hidden;
-    max-width: 460px;
-    max-height: 544px;
+    max-width: 480px;
     aspect-ratio: 115/136; 
-    width: 100%; 
-    height: 100%;
     margin: 0 auto;
 }
 
 
 /* 스와이퍼 active scale모드 */
-/* .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide {
-    transform: scale(.77) translateZ(0);
+.monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide {
+    transform: scale(0.7) translateZ(0);
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide.swiper-slide-active {  
@@ -705,7 +906,7 @@ img {
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-backface-hidden .swiper-slide.swiper-slide-active {
     transform: scale(1) translateZ(0) !important;
-} */
+}
 
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > a {
@@ -749,7 +950,7 @@ img {
 
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box > span {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     color: #fff;    
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
@@ -801,14 +1002,51 @@ img {
 
 .monthlyBrand .monthly-main .swiper-button-prev {
     background-image: url(/homebaristaimage/이달의브랜드prev.svg);
-    left: 5%;
+    left: 28%
 }
 
 .monthlyBrand .monthly-main .swiper-button-next {
     background-image: url(/homebaristaimage/이달의브랜드next.svg);
-    right: 5%;
+    right: 28%;
 }
 
+@media screen and (max-width: 1350px) {
+    .monthlyBrand .monthly-main .swiper-button-prev {
+        left: 21%;
+    }
+
+    .monthlyBrand .monthly-main .swiper-button-next {
+        right: 21%;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .monthlyBrand .title > span {
+        font-size: 44px;
+    }
+
+    .monthlyBrand .title > p {
+        font-size: 18px;
+    }
+
+    .monthlyBrand .monthly-main .monthly-swiper .swiper-slide {
+        max-width: 440px;
+    }
+
+    .monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box > span {
+        font-size: 26px;
+    }
+
+    .monthlyBrand .monthly-main .swiper-button-prev {
+        left: 17%;
+    }
+
+    .monthlyBrand .monthly-main .swiper-button-next {
+        right: 17%;
+    }
+    
+}
 /* 섹션 이달의브랜드 끝 */
 
 
