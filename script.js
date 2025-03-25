@@ -101,7 +101,7 @@ var swiper = new Swiper(".monthly-swiper", {
   breakpoints: {
     1024: {
       slidesPerView: 'auto',   
-      spaceBetween: 60, 
+      spaceBetween: 70, 
     },    
   },
 });

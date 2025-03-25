@@ -877,6 +877,7 @@ img {
 .monthlyBrand .monthly-main .monthly-swiper {
     overflow: hidden;
     width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1002,13 +1003,14 @@ img {
 
 .monthlyBrand .monthly-main .swiper-button-prev {
     background-image: url(/homebaristaimage/이달의브랜드prev.svg);
-    left: 28%
+    left: 31%
 }
 
 .monthlyBrand .monthly-main .swiper-button-next {
     background-image: url(/homebaristaimage/이달의브랜드next.svg);
-    right: 28%;
+    right: 31%;
 }
+
 
 @media screen and (max-width: 1350px) {
     .monthlyBrand .monthly-main .swiper-button-prev {
@@ -1019,7 +1021,6 @@ img {
         right: 21%;
     }
 }
-
 
 @media screen and (max-width: 1024px) {
     .monthlyBrand .title > span {
@@ -1341,6 +1342,14 @@ img {
 .company .grid > li:hover > a > .hover-box {
     opacity: 1;
     visibility: visible;
+}
+
+@media screen and (max-width: 1024px) {
+    .company .grid {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 65px;
+        row-gap: 65px;
+    }
 }
 
 /* 원두협력업체company 끝 */
