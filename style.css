@@ -299,6 +299,7 @@ img {
 .menu {
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
     padding: 20px 0;
 }
 
@@ -363,13 +364,31 @@ img {
 
     #scroll-header.fixed .sub-menu {
         display: block;
-        width: 28px;
         margin-left: 30px;
+    }
+
+    #scroll-header.fixed .sub-menu > img {
+        display:  none;
+        transition: all .3s;
+    }
+
+    #scroll-header.fixed .sub-menu > .img1 {
+        display: block;
     }
 
     .headerWrap .min-height.visible {
         min-height: 150px;
         display: block;
+    }
+
+    #scroll-header.fixed .menu.active {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 56px;
+        left: 0;  
+        padding: 20px;   
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);   
     }
 }
 /* 메뉴박스 끝 */
@@ -383,7 +402,13 @@ img {
 
 /* 모바일 헤더 */
 .mb-header {
-    display: none;
+    display: none;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 300;
+    position: fixed;
 }
 
 .mb-header .con {
@@ -392,7 +417,6 @@ img {
     align-items: center;
     position: relative;
     height: 40px;
-
 }
 
 .mb-header .con .mb-logo {
@@ -407,6 +431,16 @@ img {
     gap: 6px;
 }
 
+.mb-header .mb-submenu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 70%;
+    height: calc(100vh - 200px);
+    min-height: 465px;
+    background-color: #fff;
+}
+
 @media screen and (max-width: 768px) {
     .pc-header {
         display: none;
@@ -414,12 +448,6 @@ img {
 
     .mb-header {
         display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        z-index: 300;
     }    
 }
 /* 모바일헤더 끝 */
@@ -639,6 +667,7 @@ img {
     }
     .video .video-box {
         width: 100%;
+        padding-bottom: 54%;
     }
 }
 
@@ -646,9 +675,6 @@ img {
     .video p {
         font-size: 22px;
         margin-bottom: 26px;
-    }
-    .video .video-box {
-        width: 100%;
     }
 }
 
@@ -843,7 +869,7 @@ img {
     }
 
     .main-info .txt p:nth-child(3) > span {
-       padding: 10px 0;
+        padding: 10px 0;
     }
 
     .main-info .txt p:nth-child(4) {
@@ -890,7 +916,7 @@ img {
     }
 
     .main-info .txt p:nth-child(3) > span {
-       padding: 6px 0;
+        padding: 6px 0;
     }
 
     .main-info .txt p:nth-child(4) {
@@ -909,7 +935,8 @@ img {
 /* 섹션 이달의브랜드 시작 */
 .monthlyBrand {
     padding: 170px 0;
-    background-color: #F5FDFF;    
+    background-color: #F5FDFF; 
+    margin: 0 auto;   
 }
 
 .monthlyBrand .title {
@@ -931,14 +958,14 @@ img {
 
 .monthlyBrand .monthly-main { 
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     position: relative;
 }
 
 .monthlyBrand .monthly-main .monthly-swiper {
     overflow: hidden;
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-wrapper {
@@ -1063,12 +1090,12 @@ img {
 
 .monthlyBrand .monthly-main .swiper-button-prev {
     background-image: url(/homebaristaimage/이달의브랜드prev.svg);
-    left: 31%
+    left: 30%
 }
 
 .monthlyBrand .monthly-main .swiper-button-next {
     background-image: url(/homebaristaimage/이달의브랜드next.svg);
-    right: 31%;
+    right: 30%;
 }
 
 
@@ -1245,11 +1272,26 @@ img {
     }
 }
 
+@media screen and (min-width: 440px) and (max-width: 768px) {
+    .best .best-swiper .swiper-slide {
+        max-width: 260px;
+    }
+}
+
 @media screen and (max-width: 440px) {
+    .best {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .best .s-title {
+        margin-bottom: 20px;
+    }
+
     .best .best-swiper .swiper-slide .txt-box .tit {
         font-size: 16px;
     }
-       
+
     .best .best-swiper .swiper-slide .txt-box p:last-child span:first-child {
         font-size: 14px;
     }
@@ -1260,6 +1302,8 @@ img {
 }
 
 /* 섹션 best끝 */
+
+
 
 
 /* 섹션 review 시작 */
@@ -1287,8 +1331,8 @@ img {
 
 .review .review-swiper {
     overflow: hidden;
-    margin-top: 2rem;
-    padding: 8px 0;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
 }
 
 .review .swiper-slide {
@@ -1346,7 +1390,14 @@ img {
         font-size: 13px;
     }
 }
+
+@media screen and (max-width: 440px) {
+    .review .review-swiper {
+        margin-top: 13px;
+    }
+}
 /* 섹션 reviw 끝 */
+
 
 
 /* marquee-slide 시작 */
@@ -1374,15 +1425,16 @@ img {
 
 
 
+
 /* 원두협력업체company 시작 */
 .company {
-    margin: 100px 0;
+    margin: 6.25rem 0;
 }
 
 .company .grid {
-    margin-top: 32px;
-    column-gap: 85px;
-    row-gap: 85px;
+    margin-top: 2rem;
+    column-gap: 5.3rem;
+    row-gap: 5.3rem;
     position: relative;   
     transition: all .3s;
     overflow: hidden;
@@ -1395,7 +1447,7 @@ img {
     min-width: 100px;
     min-height: 100px;    
     overflow: hidden;
-    border-radius: 50px;   
+    border-radius: 3.2rem;   
     position: relative;
     transition: transform .4s;
 }
@@ -1431,19 +1483,77 @@ img {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .mb-company {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .company {
+        display: none;
+    }
+
+    .mb-company {
+        display: block;
+    }
+}
 /* 원두협력업체company 끝 */
 
 
 
-/* sns시작 */
 
+
+
+/* mb-원두협력업체 company 시작 */
+.mb-company {
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.mb-company .mb-company-swiper {    
+    overflow: hidden;    
+    margin-top: 28px;
+}
+
+.mb-company .mb-company-swiper .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mb-company .mb-company-swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    gap: 15px;
+}
+
+.mb-company .mb-company-swiper .swiper-wrapper .swiper-slide .slide-item > a {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 440px) {
+    .mb-company .mb-company-swiper {  
+        margin-top: 20px;
+    }
+}
+/* mb-원두협력업체 company 끝 */
+
+
+
+
+
+/* sns시작 */
 .sns {
     padding-top: 60px;
     padding-bottom: 90px;
 }
 
 .sns .grid {
-    gap: 72px;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -1481,7 +1591,6 @@ img {
 @media screen and (max-width: 1128px) {    
     .sns .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px !important;
     }
 }
 
@@ -1489,7 +1598,6 @@ img {
 @media screen and (max-width: 725px) {    
     .sns .grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 24px;
     }
 
     .sns .grid > li > a > span {
@@ -1500,21 +1608,23 @@ img {
 @media screen and (max-width: 440px) {    
     .sns .grid {
         gap: 16px;
+        margin-top: 20px;
     }
 
     .sns .grid > li > a > span {
         font-size: 14px;
     }
 }
-
 /* sns 끝 */
+
+
 
 
 
 /* footer 시작 */
 footer {
     padding-top: 10px;
-    padding-bottom: 100px;    
+    padding-bottom: 50px;    
     background-color: #FAFAFA;
 }
 
@@ -1539,7 +1649,9 @@ footer .f-top ul > li > a {
 }
 
 footer .f-bottom {
-    margin-top: 52px;
+    margin-top: 3.25rem;
+    padding-bottom: 50px;
+    position: relative;
 }
 
 footer .f-bottom > .con {
@@ -1591,5 +1703,66 @@ footer .f-bottom .bank > p > span:last-child {
 footer .f-bottom .bank > span:last-child {
     font-size: 14px;
     font-weight: 500;
+}
+
+
+@media screen and (max-width: 1024px) {
+    footer .f-bottom > .con {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .f-bottom .info > div {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer .f-top .f-logo {
+        display: none;
+    }
+
+    footer .f-top ul {
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    footer .f-top ul > li > a {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+
+    footer .f-bottom span, 
+    footer .f-bottom p {
+        font-size: 13px;
+        word-break: keep-all;
+    }
+
+    footer .f-bottom .info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer .f-bottom .info br {
+        display: none;
+    }    
+
+    footer .f-bottom .info > div {
+        font-size: 13px;
+    }
+
+    footer .f-bottom .bank > p > span:first-child {
+        font-size: 14px;
+    }
+
+    footer .f-bottom .bank > p > span:last-child {
+        font-size: 14px;
+    }
+
+    footer .f-bottom .bank > span:last-child {
+        font-size: 13px;
+    }    
 }
 /* footer 끝 */

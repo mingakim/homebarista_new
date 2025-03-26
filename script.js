@@ -38,6 +38,12 @@ $(".icons .search-box > button").click(function () {
 
 
 
+$("#scroll-header .sub-menu").click(function () {
+  $("#scroll-header .menu").toggleClass("active");
+  $("#scroll-header .sub-menu .img1").toggle(); 
+  $("#scroll-header .sub-menu .img2").toggle();
+});
+
 
 
 // visual-swiper
@@ -99,12 +105,38 @@ var swiper = new Swiper(".monthly-swiper", {
     prevEl: ".monthly-main .swiper-button-prev",
   },
   breakpoints: {
-    1024: {
-      slidesPerView: 'auto',   
-      spaceBetween: 70, 
+    1024: {   
+      spaceBetween: 30, 
     },    
   },
+  on: {
+    init: function () {
+      slideClone(this); // Swiper 초기화 후 슬라이드 복제
+    },
+
+    slideChange: function () {
+      var swiperWrapper = this.el.querySelector('.swiper-wrapper');
+      var slides = swiperWrapper.querySelectorAll('.swiper-slide');
+      
+      // 슬라이드가 끝까지 가면 복제본을 추가
+      if (this.isEnd) {
+        slideClone(this);
+      }
+    }
+  }
 });
+
+
+function slideClone(tg){
+  var swiperWrapper = tg.el.querySelector('.monthly-main .swiper-wrapper');
+  var slides = swiperWrapper.querySelectorAll('.monthly-main .swiper-slide');
+
+  // 복제하여 붙여넣기
+  for (var i = 0; i < slides.length; i++) {
+    var clone = slides[i].cloneNode(true);
+    swiperWrapper.appendChild(clone);
+  }
+} // slideClone()
 
 
 // mb-monthly-swiper
@@ -159,9 +191,13 @@ var mainSwiper = new Swiper(".best-swiper", {
   navigation: {
     nextEl: ".best .swiper-button-next",
     prevEl: ".best .swiper-button-prev",
-  },
-
+  },  
   breakpoints: {
+    440: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+
     768: {
       slidesPerView: 2.5,
       spaceBetween: 48,      
@@ -179,14 +215,19 @@ var mainSwiper = new Swiper(".best-swiper", {
 
 // review 스와이퍼
 var swiper = new Swiper(".review-swiper", {
-  slidesPerView: 1.3,
-  spaceBetween: 50,
+  slidesPerView: 1.4,
+  spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 3500,
+    delay: 3600,
     disableOnInteraction: false,
   },
   breakpoints: {
+    440: {
+      slidesPerView: 1.8,
+      spaceBetween: 40,
+    },
+
     768: {
       slidesPerView: 2.3,
     },
@@ -200,4 +241,9 @@ var swiper = new Swiper(".review-swiper", {
 
 
 
-// company 효과
+// mb-company 스와이퍼
+var swiper = new Swiper(".mb-company-swiper", {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+});
+
