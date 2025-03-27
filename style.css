@@ -250,6 +250,7 @@ img {
     display: none;
     border: 0;  
     width: 160px;  
+    height: 22px;
 }
 
 .icons .search-box > input[type="text"]:focus {
@@ -261,13 +262,11 @@ img {
 }
 
 
-.icons .search-box > button {
+.search-box > button {
     border: 0px;
     background-color: transparent;
     padding: 0px;
-    cursor: pointer;
 }
-
 
 
 
@@ -307,7 +306,8 @@ img {
     padding: 8px 0;
     font-size: 16px;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent; 
+    /* transition효과를 주기위해서 투명으로 한 것 */
     transition: border-color .2s;
 }
 
@@ -394,10 +394,13 @@ img {
 /* 메뉴박스 끝 */
 
 
+
 /* min-height */
 .headerWrap .min-height {
     display: none;
 }
+
+
 
 
 /* 모바일 헤더 */
@@ -419,6 +422,18 @@ img {
     height: 40px;
 }
 
+.mb-header .sub-menu > img {
+    display: none;
+}
+
+.mb-header .sub-menu > img {
+    display: none;
+}
+
+.mb-header .sub-menu > .img1{
+    display: block;
+}
+
 .mb-header .con .mb-logo {
     position: absolute;
     top: 50%;
@@ -428,18 +443,87 @@ img {
 
 .mb-header .con .mb-icon {
     display: flex;
-    gap: 6px;
+    gap: 8px;
 }
 
-.mb-header .mb-submenu {
-    position: absolute;
+.mb-header .mb-sidebar {
+    position: fixed;
     top: 40px;
-    left: 0;
+    left: -30%;
+    visibility: hidden;
+    opacity: 0;
     width: 70%;
-    height: calc(100vh - 200px);
-    min-height: 465px;
+    max-height: 100vh;
     background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all .3s;
 }
+
+.mb-header .mb-sidebar.active {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.mb-header .mb-sidebar .search-box {
+    align-items: center;
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.mb-header .mb-sidebar .search-box input[type="text"] {    
+    width: 100%;  
+}
+
+.mb-header .mb-sidebar .search-box input[type="text"]:focus {
+    outline: 0;
+}
+
+.mb-header .mb-sidebar .search-box .icon {
+    margin-left: 20px;
+}
+
+.mb-header .mb-sidebar .mb-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 0;
+    gap: 28px;
+}
+
+.mb-header .mb-sidebar .mb-menu > li > a {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.mb-header .mb-sidebar .user-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.mb-header .mb-sidebar .user-menu > li > a {
+    padding: 4px 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mb-header .mb-sidebar .cs {
+    padding: 24px 0;
+}
+
+.mb-header .mb-sidebar .cs span {
+    font-size: 13px;
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 768px) {
     .pc-header {
@@ -533,7 +617,22 @@ img {
     display: flex;    
     align-items: flex-end;
     justify-content: center;
+    transform: scale(0.85);
+    transition: all .3s ease-in-out;
 }
+
+#mb-monthlyBrand .mb-monthly-main .swiper-backface-hidden .swiper-slide {
+    transform: scale(0.85) translateZ(0);
+}
+
+#mb-monthlyBrand .mb-monthly-main .swiper-slide.swiper-slide-active {  
+    transform: scale(1) !important;
+}
+
+#mb-monthlyBrand .mb-monthly-main .swiper-backface-hidden .swiper-slide.swiper-slide-active {
+    transform: scale(1) translateZ(0) !important;
+}
+
 
 #mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-one {
     background-image: url(/homebaristaimage/이달의브랜드1.svg);
@@ -609,10 +708,6 @@ img {
 @media screen and (max-width: 440px) {
     #mb-monthlyBrand .title > span {
         font-size: 26px;
-    }
-
-    #mb-monthlyBrand .mb-monthly-main .swiper-slide {
-        width: 85% !important;
     }
 }
 
@@ -1395,6 +1490,10 @@ img {
     .review .review-swiper {
         margin-top: 13px;
     }
+
+    .review .swiper-slide .star-box > span:first-child {
+    font-size: 13px;
+    }
 }
 /* 섹션 reviw 끝 */
 
@@ -1410,7 +1509,7 @@ img {
     display: flex;
     align-items: center;
     gap: 96px;
-    animation: marquee 80s linear infinite ;
+    animation: marquee 80s linear infinite;
 }
 
 @keyframes marquee {
@@ -1421,6 +1520,20 @@ img {
         transform: translateX(-100%); 
     }
 }
+
+@media screen and (max-width: 768px) {
+    .marquee .scroll {
+        animation: marquee 50s linear infinite;
+    }    
+}
+
+@media screen and (max-width: 440px) {
+    .marquee .scroll {
+        animation: marquee 20s linear infinite;
+    }
+}
+        /* 768px 부터 끊기는 현상 발생 */
+
 /* marquee-slide 끝 */
 
 
@@ -1504,7 +1617,6 @@ img {
 
 
 
-
 /* mb-원두협력업체 company 시작 */
 .mb-company {
     padding-left: 20px;
@@ -1515,20 +1627,17 @@ img {
 .mb-company .mb-company-swiper {    
     overflow: hidden;    
     margin-top: 28px;
+    width: 100%;
 }
 
 .mb-company .mb-company-swiper .swiper-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 15px;
 }
+        /* 스와이퍼 작동 오류 */
 
 .mb-company .mb-company-swiper .swiper-wrapper .swiper-slide {
-    display: flex;
-    gap: 15px;
-}
-
-.mb-company .mb-company-swiper .swiper-wrapper .swiper-slide .slide-item > a {
     width: 120px;
     height: 120px;
     overflow: hidden;
@@ -1564,6 +1673,7 @@ img {
     padding: 1rem 2.5rem;
     border: 1px solid #DADADA;
     border-radius: 40px;
+    white-space: nowrap;
 }
 
 .sns .grid > li > a:hover  {
@@ -1598,6 +1708,11 @@ img {
 @media screen and (max-width: 725px) {    
     .sns .grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sns .grid > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .sns .grid > li > a > span {
@@ -1649,7 +1764,7 @@ footer .f-top ul > li > a {
 }
 
 footer .f-bottom {
-    margin-top: 3.25rem;
+    padding-top: 3.25rem;
     padding-bottom: 50px;
     position: relative;
 }
@@ -1681,7 +1796,7 @@ footer .f-bottom .info > div {
     color: #9E9E9E;
     font-size: 14px;
     font-weight: 500;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 footer .f-bottom .bank > p {
@@ -1707,11 +1822,16 @@ footer .f-bottom .bank > span:last-child {
 
 
 @media screen and (max-width: 1024px) {
+    footer .f-bottom {
+        padding-top: 2.5rem;
+    }
+
     footer .f-bottom > .con {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
+    
     footer .f-bottom .info > div {
         position: absolute;
         bottom: 0;

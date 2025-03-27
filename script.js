@@ -37,11 +37,19 @@ $(".icons .search-box > button").click(function () {
 });
 
 
-
+// pc-스크롤헤더 sub-menu 햄버거
 $("#scroll-header .sub-menu").click(function () {
   $("#scroll-header .menu").toggleClass("active");
   $("#scroll-header .sub-menu .img1").toggle(); 
   $("#scroll-header .sub-menu .img2").toggle();
+});
+
+
+// mb-sidebar 햄버거
+$(".mb-header .sub-menu").click(function () {
+  $(".mb-header .mb-sidebar .img1").toggle(); 
+  $(".mb-header .mb-sidebar .img2").toggle();
+  $(".mb-header .mb-sidebar").toggleClass("active");
 });
 
 
@@ -139,47 +147,21 @@ function slideClone(tg){
 } // slideClone()
 
 
+
+
 // mb-monthly-swiper
 var swiper = new Swiper(".mb-monthly-swiper", {
   centeredSlides: true,
   loop: true, 
   slidesPerView: 'auto',
-  spaceBetween: 10,
+  spaceBetween: 0,
   breakpoints: {
     440: {
       slidesPerView: 'auto',   
-      spaceBetween: 25, 
+      spaceBetween: 15, 
     },    
   },
 });
-
-
-// monthly-swiper
-// var swiper = new Swiper(".monthly-swiper", {
-//   effect: "coverflow",
-//   centeredSlides: true,
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 300,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   loop: true,
-//   navigation: {
-//     nextEl: ".monthly-main .swiper-button-next",
-//     prevEl: ".monthly-main .swiper-button-prev",
-//   },  
-//   slidesPerView: 1.5, 
-//   spaceBetween: 200,
-//   breakpoints: {
-//     1024: {
-//       slidesPerView: 2,
-//       spaceBetween: 0,
-//     },    
-//   }, 
-// });
-
 
 
 
@@ -245,5 +227,8 @@ var swiper = new Swiper(".review-swiper", {
 var swiper = new Swiper(".mb-company-swiper", {
   slidesPerView: 'auto',
   spaceBetween: 15,
+  // grid: {
+  //   row: 2,
+  // },
 });
 
