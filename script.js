@@ -47,8 +47,8 @@ $("#scroll-header .sub-menu").click(function () {
 
 // mb-sidebar 햄버거
 $(".mb-header .sub-menu").click(function () {
-  $(".mb-header .mb-sidebar .img1").toggle(); 
-  $(".mb-header .mb-sidebar .img2").toggle();
+  $(".mb-header .sub-menu .img1").toggle(); 
+  $(".mb-header .sub-menu .img2").toggle();
   $(".mb-header .mb-sidebar").toggleClass("active");
 });
 
