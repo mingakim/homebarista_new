@@ -201,6 +201,8 @@ img {
 /* 헤더탑 끝 */
 
 
+
+
 /* 헤더 시작 */
 .header {
     padding-top: 16px;
@@ -342,7 +344,7 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 56px
+        height: 56px;
     }     
 
     #scroll-header.fixed .logo-icon {
@@ -351,7 +353,7 @@ img {
     } 
 
 
-    #scroll-header.fixed .menu {
+    #scroll-header.fixed .nav {
         display: none;
     }
 
@@ -376,19 +378,25 @@ img {
         display: block;
     }
 
-    .headerWrap .min-height.visible {
-        min-height: 150px;
-        display: block;
-    }
-
-    #scroll-header.fixed .menu.active {
-        display: flex;
-        width: 100%;
+    #scroll-header.fixed .nav.active {
+        display: block;        
+        width: 100%;        
         position: absolute;
         top: 56px;
         left: 0;  
-        padding: 20px;   
+        background-color: #fff;
+        padding: 0 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);   
+    }
+    
+    #scroll-header.fixed .menu {
+        max-width: 1440px;        
+        margin: 0 auto;
+    }  
+    
+    .headerWrap .min-height.visible {
+        min-height: 140px;
+        display: block;
     }
 }
 /* 메뉴박스 끝 */
@@ -399,7 +407,6 @@ img {
 .headerWrap .min-height {
     display: none;
 }
-
 
 
 
@@ -710,8 +717,6 @@ img {
         font-size: 26px;
     }
 }
-
-
 /* mb-이달의 브랜드 끝 */
 
 
@@ -757,7 +762,7 @@ img {
         margin-bottom: 40px;
     }
 
-    .video p {
+    .video .fade p {
         font-size: 54px;        
     }    
 }
@@ -767,7 +772,7 @@ img {
         margin-bottom: 32px;
     }
 
-    .video p {
+    .video .fade p {
         font-size: 32px;        
     }
 
@@ -782,12 +787,10 @@ img {
         margin-bottom: 26px;
     }
 
-    .video p {
+    .video .fade p {
         font-size: 22px;
     }
 }
-
-
 /* video 끝 */
 
 
@@ -881,7 +884,6 @@ img {
 
 .main-info .txt p:nth-child(2) > span::after {
     content: "";
-    width: 100%;
     height: 14px;
     position: absolute;
     bottom: 10px;
@@ -889,6 +891,23 @@ img {
     background-color: #99FEE7;
     z-index: -1;
 }
+
+.main-info .txt p:nth-child(2) > span.aos-animate::after {
+    animation: expand .8s ease-in-out 1.2s forwards; 
+}
+
+
+@keyframes expand {
+    0% {
+        width: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 100%; 
+        opacity: 1;
+    }
+}
+
 
 .main-info .txt p:nth-child(3) {
     padding-top: 36px;
@@ -912,7 +931,7 @@ img {
 }
 
 @media screen and (max-width: 1400px) {
-    .main-info .big-logo > img{
+    .main-info .big-logo > img {
         width: 400px;
     }    
 }
@@ -1052,20 +1071,21 @@ img {
 
 .monthlyBrand .title {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
 }
 
 .monthlyBrand .title p:first-child {
     overflow: hidden;
+    padding-top: 10px;
 }
 
 .monthlyBrand .title p:first-child > span {    
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 700;
 }
 
 .monthlyBrand .title > p:last-child {
-    font-size: 21px;
+    font-size: 1.15rem;
     color: #B3B3B3;
     margin-top: 16px;
     font-style: italic;
@@ -1216,23 +1236,15 @@ img {
 
 @media screen and (max-width: 1350px) {
     .monthlyBrand .monthly-main .swiper-button-prev {
-        left: 21%;
+        left: 23%;
     }
 
     .monthlyBrand .monthly-main .swiper-button-next {
-        right: 21%;
+        right: 23%;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .monthlyBrand .title p:first-child > span {
-        font-size: 44px;
-    }
-
-    .monthlyBrand .title > p:last-child {
-        font-size: 18px;
-    }
-
     .monthlyBrand .monthly-main .monthly-swiper .swiper-slide {
         max-width: 440px;
     }
@@ -1251,6 +1263,7 @@ img {
     
 }
 /* 섹션 이달의브랜드 끝 */
+
 
 
 
@@ -1576,14 +1589,63 @@ img {
 
 .company .grid > li > a {
     max-width: 220px;
-    max-height: 220px;
-    min-width: 100px;
-    min-height: 100px;    
+    max-height: 220px; 
     overflow: hidden;
     border-radius: 3.2rem;   
-    position: relative;
-    transition: transform .4s;
+    position: relative;  
+    transform: scale(1);      
+    transition: transform 0.3s ease-in-out .05s, transform-origin 0.3s ease-in-out;
 }
+
+.company .grid > li > a:hover {
+    transform: scale(1.3);
+    z-index: 100;    
+}
+
+.company .grid > li:nth-child(1)  a:hover,
+.company .grid > li:nth-child(2)  a:hover{
+    transform-origin: 0% 0%;
+}
+
+.company .grid > li:nth-child(3)  a:hover {
+    transform-origin: 50% 0;
+}
+
+.company .grid > li:nth-child(4)  a:hover,
+.company .grid > li:nth-child(5)  a:hover {
+    transform-origin: 100% 0%;
+}
+
+.company .grid > li:nth-child(6)  a:hover {
+    transform-origin: 0% 50%;
+}
+
+.company .grid > li:nth-child(7) a:hover,
+.company .grid > li:nth-child(8) a:hover,
+.company .grid > li:nth-child(9) a:hover  {
+    transform-origin: 50% 50%;
+}
+
+.company .grid > li:nth-child(10) a:hover {
+    transform-origin: 100% 50%;
+}
+
+.company .grid > li:nth-child(11) a:hover,
+.company .grid > li:nth-child(12) a:hover {
+    transform-origin: 0% 100%;
+}
+
+
+.company .grid > li:nth-child(13) a:hover {
+    transform-origin: 50% 100%;
+}
+
+
+.company .grid > li:nth-child(14) a:hover,
+.company .grid > li:nth-child(15)  a:hover {
+    transform-origin: 100% 100%;
+}
+
 
 .company .grid > li > a > .hover-box {
     position: absolute;
@@ -1598,8 +1660,10 @@ img {
     display: flex;
     opacity: 0;
     visibility: hidden;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    word-break: keep-all;
     transition: all .3s;
 }
 
@@ -1608,11 +1672,48 @@ img {
     visibility: visible;
 }
 
+
 @media screen and (max-width: 1024px) {
     .company .grid {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 65px;
         row-gap: 65px;
+    }
+    .company .grid > li:nth-child(1)  a:hover,
+    .company .grid > li:nth-child(2)  a:hover{
+        transform-origin: 0% 0%;
+    }
+
+    .company .grid > li:nth-child(3)  a:hover,
+    .company .grid > li:nth-child(4)  a:hover {
+        transform-origin: 100% 0%;
+    }
+
+    .company .grid > li:nth-child(5)  a:hover,
+    .company .grid > li:nth-child(9) a:hover {
+        transform-origin: 0% 50%;
+    }
+
+    .company .grid > li:nth-child(6) a:hover,
+    .company .grid > li:nth-child(7) a:hover,
+    .company .grid > li:nth-child(10) a:hover,
+    .company .grid > li:nth-child(11) a:hover {
+        transform-origin: 50% 50%;
+    }
+
+    .company .grid > li:nth-child(8) a:hover,
+    .company .grid > li:nth-child(12) a:hover {
+        transform-origin: 100% 50%;
+    }
+
+    .company .grid > li:nth-child(13) a:hover {
+        transform-origin: 0% 100%;
+    }
+
+
+    .company .grid > li:nth-child(14) a:hover,    
+    .company .grid > li:nth-child(15) a:hover {
+        transform-origin: 50% 100%;
     }
 }
 
@@ -1890,7 +1991,7 @@ footer .f-bottom .bank > span:last-child {
     }    
 
     footer .f-bottom .info > div {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     footer .f-bottom .bank > p > span:first-child {

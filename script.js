@@ -39,7 +39,7 @@ $(".icons .search-box > button").click(function () {
 
 // pc-스크롤헤더 sub-menu 햄버거
 $("#scroll-header .sub-menu").click(function () {
-  $("#scroll-header .menu").toggleClass("active");
+  $("#scroll-header .nav").toggleClass("active");
   $("#scroll-header .sub-menu .img1").toggle(); 
   $("#scroll-header .sub-menu .img2").toggle();
 });
@@ -97,7 +97,9 @@ ScrollTrigger.matchMedia({
 
 
 
-// main-info txt aos 효과
+
+
+// txt aos 효과
 AOS.init();
 
 
@@ -134,7 +136,6 @@ var swiper = new Swiper(".monthly-swiper", {
   }
 });
 
-
 function slideClone(tg){
   var swiperWrapper = tg.el.querySelector('.monthly-main .swiper-wrapper');
   var slides = swiperWrapper.querySelectorAll('.monthly-main .swiper-slide');
@@ -145,6 +146,7 @@ function slideClone(tg){
     swiperWrapper.appendChild(clone);
   }
 } // slideClone()
+
 
 
 
@@ -181,11 +183,11 @@ var mainSwiper = new Swiper(".best-swiper", {
     },
 
     768: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.6,
       spaceBetween: 48,      
     },
     
-    1150: {
+    1120: {
       slidesPerView: 3,
       spaceBetween: 94,       
     },
