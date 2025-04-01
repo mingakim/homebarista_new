@@ -1,59 +1,53 @@
 /* 폰트 */
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/3Pretendard-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 
+
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/4Pretendard-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/5Pretendard-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/6Pretendard-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/7Pretendard-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/8Pretendard-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     src: url("/font/pretendard/9Pretendard-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'PartialSansKR-Regular';
-    src: url('/font/파셜산스/PartialSansKR-Regular.otf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 body {
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
 }
 
 /* 노말라이즈 */
@@ -737,10 +731,11 @@ img {
     font-weight: 700;
 }
 
+
 .video .video-box {
     position: relative;
     padding-bottom: 44%;
-    width: 60%;
+    /* width: 60%; */
     display: block;
     margin: 0 auto;
     overflow: hidden;
@@ -1579,17 +1574,13 @@ img {
 
 .company .grid {
     margin-top: 2rem;
-    column-gap: 5.3rem;
-    row-gap: 5.3rem;
+    gap: 3rem;
     position: relative;   
     transition: all .3s;
-    overflow: hidden;
 }
 
 
 .company .grid > li > a {
-    max-width: 220px;
-    max-height: 220px; 
     overflow: hidden;
     border-radius: 3.2rem;   
     position: relative;  
@@ -1598,7 +1589,7 @@ img {
 }
 
 .company .grid > li > a:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     z-index: 100;    
 }
 

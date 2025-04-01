@@ -81,6 +81,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
   "(min-width: 768px)": function() {
+    gsap.set(".video-box", {
+      width: "60%", // 애니메이션 시작 전에 width를 60%로 설정
+    });
     gsap.to(".video-box", {
         width: "100%",  
         scrollTrigger: {
@@ -158,8 +161,7 @@ var swiper = new Swiper(".mb-monthly-swiper", {
   spaceBetween: 0,
   breakpoints: {
     440: {
-      slidesPerView: 'auto',   
-      spaceBetween: 15, 
+      slidesPerView: 'auto',  
     },    
   },
 });
