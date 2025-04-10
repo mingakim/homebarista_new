@@ -230,8 +230,9 @@ var swiper = new Swiper(".review-swiper", {
 var swiper = new Swiper(".mb-company-swiper", {
   slidesPerView: 'auto',
   spaceBetween: 15,
-  // grid: {
-  //   row: 2,
-  // },
+  grid: {
+    rows: 2,        // 행(row) 2개
+    fill: 'row'     // 'row' 옵션으로 행 단위로 채워 넣기 (기본값 'row', 'column'도 선택 가능)
+  },
 });
 
