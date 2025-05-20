@@ -567,13 +567,13 @@ img {
 }
 
 .visual .visual-swiper .swiper-button-prev {
-    background-image: url(/homebaristaimage/배너-prev.svg);
+    background-image: url(./homebaristaimage/배너-prev.svg);
     left: 10%;
     transform: translate(50px, -50%);
 }
 
 .visual .visual-swiper .swiper-button-next {
-    background-image: url(/homebaristaimage/배너-next.svg);
+    background-image: url(./homebaristaimage/배너-next.svg);
     right: 10%;
     transform: translate(-50px, -50%);
 }
@@ -636,15 +636,15 @@ img {
 
 
 #mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-one {
-    background-image: url(/homebaristaimage/이달의브랜드1.svg);
+    background-image: url(./homebaristaimage/이달의브랜드1.svg);
 }
 
 #mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-two {
-    background-image: url(/homebaristaimage/이달의브랜드2.svg);
+    background-image: url(./homebaristaimage/이달의브랜드2.svg);
 }
 
 #mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .slide-three {
-    background-image: url(/homebaristaimage/이달의브랜드3.svg);
+    background-image: url(./homebaristaimage/이달의브랜드3.svg);
 }
 
 #mb-monthlyBrand .mb-monthly-main .mb-monthly-swiper .swiper-slide > div {
@@ -1141,15 +1141,15 @@ img {
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-one {
-    background-image: url(/homebaristaimage/이달의브랜드1.svg);
+    background-image: url(./homebaristaimage/이달의브랜드1.svg);
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-two {
-    background-image: url(/homebaristaimage/이달의브랜드2.svg);
+    background-image: url(./homebaristaimage/이달의브랜드2.svg);
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide > .slide-three {
-    background-image: url(/homebaristaimage/이달의브랜드3.svg);
+    background-image: url(./homebaristaimage/이달의브랜드3.svg);
 }
 
 .monthlyBrand .monthly-main .monthly-swiper .swiper-slide .txt-box {
@@ -1220,12 +1220,12 @@ img {
 }
 
 .monthlyBrand .monthly-main .swiper-button-prev {
-    background-image: url(/homebaristaimage/이달의브랜드prev.svg);
+    background-image: url(./homebaristaimage/이달의브랜드prev.svg);
     left: 30%
 }
 
 .monthlyBrand .monthly-main .swiper-button-next {
-    background-image: url(/homebaristaimage/이달의브랜드next.svg);
+    background-image: url(./homebaristaimage/이달의브랜드next.svg);
     right: 30%;
 }
 
@@ -1292,12 +1292,12 @@ img {
 }
 
 .best .s-title .swiper-button-wrap .swiper-button-prev {
-    background-image: url(/homebaristaimage/인기상품prev.svg);
+    background-image: url(./homebaristaimage/인기상품prev.svg);
     left: 0;
 }
 
 .best .s-title .swiper-button-wrap .swiper-button-next {
-    background-image: url(/homebaristaimage/인기상품next.svg);
+    background-image: url(./homebaristaimage/인기상품next.svg);
     right: 0;
 }
 
@@ -1446,7 +1446,7 @@ img {
     display: block;
     width: 12px;
     height: 12px;
-    background-image: url(/homebaristaimage/더보기arrow.svg);
+    background-image: url(./homebaristaimage/더보기arrow.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1803,7 +1803,7 @@ img {
     width: 14px;
     height: 14px;
     margin-left: auto;
-    background-image: url(/homebaristaimage/sns바로가기.svg);
+    background-image: url(./homebaristaimage/sns바로가기.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
